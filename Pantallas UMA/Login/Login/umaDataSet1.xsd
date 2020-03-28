@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="umaDataSet1" targetNamespace="http://tempuri.org/umaDataSet1.xsd" xmlns:mstns="http://tempuri.org/umaDataSet1.xsd" xmlns="http://tempuri.org/umaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="umaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="umaConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Login.Properties.Settings.GlobalReference.Default.umaConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoria_clienteTableAdapter" GeneratorDataComponentClassName="categoria_clienteTableAdapter" Name="categoria_cliente" UserDataComponentName="categoria_clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.categoria_cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_categoria_cliente`, `nombre_categoria` FROM `categoria_cliente`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoria_empleadoTableAdapter" GeneratorDataComponentClassName="categoria_empleadoTableAdapter" Name="categoria_empleado" UserDataComponentName="categoria_empleadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.categoria_empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_categoria_empleado`, `nombre_categoria` FROM `categoria_empleado`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoria_productoTableAdapter" GeneratorDataComponentClassName="categoria_productoTableAdapter" Name="categoria_producto" UserDataComponentName="categoria_productoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.categoria_producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_categoria_producto`, `nombre_categoria` FROM `categoria_producto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clienteTableAdapter" GeneratorDataComponentClassName="clienteTableAdapter" Name="cliente" UserDataComponentName="clienteTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_cliente`, `id_categoria_cliente`, `nombre_cliente`, `numero_telefono`, `correo_electronico`, `direccion_cliente`, `RTN`, `numero_identidad` FROM `cliente`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="detalleTableAdapter" GeneratorDataComponentClassName="detalleTableAdapter" Name="detalle" UserDataComponentName="detalleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.detalle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_detalle`, `id_venta`, `id_producto`, `cantidad`, `precio_venta`, `subtotal` FROM `detalle`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="empleadoTableAdapter" GeneratorDataComponentClassName="empleadoTableAdapter" Name="empleado" UserDataComponentName="empleadoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.empleado" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_empleado`, `id_categoria_empleado`, `nombre_empleado`, `numero_identidad`, `edad`, `genero`, `direccion`, `correo_electronico`, `grado_academico`, `contraseña_login` FROM `empleado`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="estante_productoTableAdapter" GeneratorDataComponentClassName="estante_productoTableAdapter" Name="estante_producto" UserDataComponentName="estante_productoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.estante_producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_estante_producto`, `estante_producto`, `id_producto` FROM `estante_producto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="productoTableAdapter" GeneratorDataComponentClassName="productoTableAdapter" Name="producto" UserDataComponentName="productoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_producto`, `id_tipo_producto`, `nombre`, `imagen`, `precio_venta` FROM `producto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="producto_generalTableAdapter" GeneratorDataComponentClassName="producto_generalTableAdapter" Name="producto_general" UserDataComponentName="producto_generalTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.producto_general" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_pro_general`, `id_tip_producto`, `precio_compra`, `nombre_producto`, `marca`, `existencia`, `precio_venta` FROM `producto_general`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="repuestoTableAdapter" GeneratorDataComponentClassName="repuestoTableAdapter" Name="repuesto" UserDataComponentName="repuestoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.repuesto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_repuesto`, `id_tip_producto`, `id_cat_producto`, `nombre`, `marca`, `modelo`, `año`, `fabricante`, `precio_compra`, `precio_venta`, `existencia` FROM `repuesto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="servicioTableAdapter" GeneratorDataComponentClassName="servicioTableAdapter" Name="servicio" UserDataComponentName="servicioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.servicio" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_servicio`, `id_tip_producto`, `nombre_servicio`, `precio` FROM `servicio`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipo_productoTableAdapter" GeneratorDataComponentClassName="tipo_productoTableAdapter" Name="tipo_producto" UserDataComponentName="tipo_productoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.tipo_producto" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_tipo_producto`, `nombre_tipo` FROM `tipo_producto`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ventaTableAdapter" GeneratorDataComponentClassName="ventaTableAdapter" Name="venta" UserDataComponentName="ventaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="umaConnectionString1 (Settings)" DbObjectName="uma.venta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `id_venta`, `estado`, `fecha_hora`, `id_cliente`, `id_cat_cliente`, `descuento`, `isv`, `total` FROM `venta`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="umaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="umaDataSet1" msprop:Generator_UserDSName="umaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="categoria_cliente" msprop:Generator_TableClassName="categoria_clienteDataTable" msprop:Generator_TableVarName="tablecategoria_cliente" msprop:Generator_TablePropName="categoria_cliente" msprop:Generator_RowDeletingName="categoria_clienteRowDeleting" msprop:Generator_RowChangingName="categoria_clienteRowChanging" msprop:Generator_RowEvHandlerName="categoria_clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="categoria_clienteRowDeleted" msprop:Generator_UserTableName="categoria_cliente" msprop:Generator_RowChangedName="categoria_clienteRowChanged" msprop:Generator_RowEvArgName="categoria_clienteRowChangeEvent" msprop:Generator_RowClassName="categoria_clienteRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="categoria_empleado" msprop:Generator_TableClassName="categoria_empleadoDataTable" msprop:Generator_TableVarName="tablecategoria_empleado" msprop:Generator_TablePropName="categoria_empleado" msprop:Generator_RowDeletingName="categoria_empleadoRowDeleting" msprop:Generator_RowChangingName="categoria_empleadoRowChanging" msprop:Generator_RowEvHandlerName="categoria_empleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="categoria_empleadoRowDeleted" msprop:Generator_UserTableName="categoria_empleado" msprop:Generator_RowChangedName="categoria_empleadoRowChanged" msprop:Generator_RowEvArgName="categoria_empleadoRowChangeEvent" msprop:Generator_RowClassName="categoria_empleadoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="categoria_producto" msprop:Generator_TableClassName="categoria_productoDataTable" msprop:Generator_TableVarName="tablecategoria_producto" msprop:Generator_TablePropName="categoria_producto" msprop:Generator_RowDeletingName="categoria_productoRowDeleting" msprop:Generator_RowChangingName="categoria_productoRowChanging" msprop:Generator_RowEvHandlerName="categoria_productoRowChangeEventHandler" msprop:Generator_RowDeletedName="categoria_productoRowDeleted" msprop:Generator_UserTableName="categoria_producto" msprop:Generator_RowChangedName="categoria_productoRowChanged" msprop:Generator_RowEvArgName="categoria_productoRowChangeEvent" msprop:Generator_RowClassName="categoria_productoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="cliente" msprop:Generator_TableClassName="clienteDataTable" msprop:Generator_TableVarName="tablecliente" msprop:Generator_TablePropName="cliente" msprop:Generator_RowDeletingName="clienteRowDeleting" msprop:Generator_RowChangingName="clienteRowChanging" msprop:Generator_RowEvHandlerName="clienteRowChangeEventHandler" msprop:Generator_RowDeletedName="clienteRowDeleted" msprop:Generator_UserTableName="cliente" msprop:Generator_RowChangedName="clienteRowChanged" msprop:Generator_RowEvArgName="clienteRowChangeEvent" msprop:Generator_RowClassName="clienteRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="detalle" msprop:Generator_TableClassName="detalleDataTable" msprop:Generator_TableVarName="tabledetalle" msprop:Generator_TablePropName="detalle" msprop:Generator_RowDeletingName="detalleRowDeleting" msprop:Generator_RowChangingName="detalleRowChanging" msprop:Generator_RowEvHandlerName="detalleRowChangeEventHandler" msprop:Generator_RowDeletedName="detalleRowDeleted" msprop:Generator_UserTableName="detalle" msprop:Generator_RowChangedName="detalleRowChanged" msprop:Generator_RowEvArgName="detalleRowChangeEvent" msprop:Generator_RowClassName="detalleRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="empleado" msprop:Generator_TableClassName="empleadoDataTable" msprop:Generator_TableVarName="tableempleado" msprop:Generator_TablePropName="empleado" msprop:Generator_RowDeletingName="empleadoRowDeleting" msprop:Generator_RowChangingName="empleadoRowChanging" msprop:Generator_RowEvHandlerName="empleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="empleadoRowDeleted" msprop:Generator_UserTableName="empleado" msprop:Generator_RowChangedName="empleadoRowChanged" msprop:Generator_RowEvArgName="empleadoRowChangeEvent" msprop:Generator_RowClassName="empleadoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="estante_producto" msprop:Generator_TableClassName="estante_productoDataTable" msprop:Generator_TableVarName="tableestante_producto" msprop:Generator_TablePropName="estante_producto" msprop:Generator_RowDeletingName="estante_productoRowDeleting" msprop:Generator_RowChangingName="estante_productoRowChanging" msprop:Generator_RowEvHandlerName="estante_productoRowChangeEventHandler" msprop:Generator_RowDeletedName="estante_productoRowDeleted" msprop:Generator_UserTableName="estante_producto" msprop:Generator_RowChangedName="estante_productoRowChanged" msprop:Generator_RowEvArgName="estante_productoRowChangeEvent" msprop:Generator_RowClassName="estante_productoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="producto" msprop:Generator_TableClassName="productoDataTable" msprop:Generator_TableVarName="tableproducto" msprop:Generator_TablePropName="producto" msprop:Generator_RowDeletingName="productoRowDeleting" msprop:Generator_RowChangingName="productoRowChanging" msprop:Generator_RowEvHandlerName="productoRowChangeEventHandler" msprop:Generator_RowDeletedName="productoRowDeleted" msprop:Generator_UserTableName="producto" msprop:Generator_RowChangedName="productoRowChanged" msprop:Generator_RowEvArgName="productoRowChangeEvent" msprop:Generator_RowClassName="productoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="producto_general" msprop:Generator_TableClassName="producto_generalDataTable" msprop:Generator_TableVarName="tableproducto_general" msprop:Generator_TablePropName="producto_general" msprop:Generator_RowDeletingName="producto_generalRowDeleting" msprop:Generator_RowChangingName="producto_generalRowChanging" msprop:Generator_RowEvHandlerName="producto_generalRowChangeEventHandler" msprop:Generator_RowDeletedName="producto_generalRowDeleted" msprop:Generator_UserTableName="producto_general" msprop:Generator_RowChangedName="producto_generalRowChanged" msprop:Generator_RowEvArgName="producto_generalRowChangeEvent" msprop:Generator_RowClassName="producto_generalRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="repuesto" msprop:Generator_TableClassName="repuestoDataTable" msprop:Generator_TableVarName="tablerepuesto" msprop:Generator_TablePropName="repuesto" msprop:Generator_RowDeletingName="repuestoRowDeleting" msprop:Generator_RowChangingName="repuestoRowChanging" msprop:Generator_RowEvHandlerName="repuestoRowChangeEventHandler" msprop:Generator_RowDeletedName="repuestoRowDeleted" msprop:Generator_UserTableName="repuesto" msprop:Generator_RowChangedName="repuestoRowChanged" msprop:Generator_RowEvArgName="repuestoRowChangeEvent" msprop:Generator_RowClassName="repuestoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="servicio" msprop:Generator_TableClassName="servicioDataTable" msprop:Generator_TableVarName="tableservicio" msprop:Generator_TablePropName="servicio" msprop:Generator_RowDeletingName="servicioRowDeleting" msprop:Generator_RowChangingName="servicioRowChanging" msprop:Generator_RowEvHandlerName="servicioRowChangeEventHandler" msprop:Generator_RowDeletedName="servicioRowDeleted" msprop:Generator_UserTableName="servicio" msprop:Generator_RowChangedName="servicioRowChanged" msprop:Generator_RowEvArgName="servicioRowChangeEvent" msprop:Generator_RowClassName="servicioRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tipo_producto" msprop:Generator_TableClassName="tipo_productoDataTable" msprop:Generator_TableVarName="tabletipo_producto" msprop:Generator_TablePropName="tipo_producto" msprop:Generator_RowDeletingName="tipo_productoRowDeleting" msprop:Generator_RowChangingName="tipo_productoRowChanging" msprop:Generator_RowEvHandlerName="tipo_productoRowChangeEventHandler" msprop:Generator_RowDeletedName="tipo_productoRowDeleted" msprop:Generator_UserTableName="tipo_producto" msprop:Generator_RowChangedName="tipo_productoRowChanged" msprop:Generator_RowEvArgName="tipo_productoRowChangeEvent" msprop:Generator_RowClassName="tipo_productoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="venta" msprop:Generator_TableClassName="ventaDataTable" msprop:Generator_TableVarName="tableventa" msprop:Generator_TablePropName="venta" msprop:Generator_RowDeletingName="ventaRowDeleting" msprop:Generator_RowChangingName="ventaRowChanging" msprop:Generator_RowEvHandlerName="ventaRowChangeEventHandler" msprop:Generator_RowDeletedName="ventaRowDeleted" msprop:Generator_UserTableName="venta" msprop:Generator_RowChangedName="ventaRowChanged" msprop:Generator_RowEvArgName="ventaRowChangeEvent" msprop:Generator_RowClassName="ventaRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
