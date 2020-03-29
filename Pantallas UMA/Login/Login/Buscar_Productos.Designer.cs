@@ -36,12 +36,12 @@
             this.btn_Gestionar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_BuscarProducto = new System.Windows.Forms.DataGridView();
-            this.Id_Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnBuscarPro_pantBuscarProducto = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.rbOtrosProductos = new System.Windows.Forms.RadioButton();
+            this.rbRepuesto = new System.Windows.Forms.RadioButton();
+            this.rbServicio = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BuscarProducto)).BeginInit();
             this.SuspendLayout();
@@ -110,47 +110,24 @@
             this.pictureBox1.Location = new System.Drawing.Point(628, 126);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 131);
+            this.pictureBox1.Size = new System.Drawing.Size(95, 149);
             this.pictureBox1.TabIndex = 66;
             this.pictureBox1.TabStop = false;
             // 
             // dgv_BuscarProducto
             // 
+            this.dgv_BuscarProducto.AllowUserToOrderColumns = true;
+            this.dgv_BuscarProducto.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgv_BuscarProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_BuscarProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Producto,
-            this.nombre});
             this.dgv_BuscarProducto.Location = new System.Drawing.Point(273, 126);
             this.dgv_BuscarProducto.Margin = new System.Windows.Forms.Padding(2);
             this.dgv_BuscarProducto.Name = "dgv_BuscarProducto";
-            this.dgv_BuscarProducto.RowHeadersWidth = 51;
+            this.dgv_BuscarProducto.ReadOnly = true;
+            this.dgv_BuscarProducto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.dgv_BuscarProducto.RowTemplate.Height = 24;
             this.dgv_BuscarProducto.Size = new System.Drawing.Size(351, 149);
             this.dgv_BuscarProducto.TabIndex = 65;
-            // 
-            // Id_Producto
-            // 
-            this.Id_Producto.HeaderText = "Id Producto";
-            this.Id_Producto.Name = "Id_Producto";
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.Width = 200;
-            // 
-            // btnBuscarPro_pantBuscarProducto
-            // 
-            this.btnBuscarPro_pantBuscarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnBuscarPro_pantBuscarProducto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarPro_pantBuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarPro_pantBuscarProducto.Location = new System.Drawing.Point(408, 83);
-            this.btnBuscarPro_pantBuscarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarPro_pantBuscarProducto.Name = "btnBuscarPro_pantBuscarProducto";
-            this.btnBuscarPro_pantBuscarProducto.Size = new System.Drawing.Size(158, 28);
-            this.btnBuscarPro_pantBuscarProducto.TabIndex = 64;
-            this.btnBuscarPro_pantBuscarProducto.Text = "BUSCAR";
-            this.btnBuscarPro_pantBuscarProducto.UseVisualStyleBackColor = false;
+            this.dgv_BuscarProducto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_BuscarProducto_CellContentClick);
             // 
             // label1
             // 
@@ -159,20 +136,21 @@
             this.label1.Location = new System.Drawing.Point(335, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 15);
+            this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 63;
-            this.label1.Text = "ID PRODUCTO:";
+            this.label1.Text = "BUSCAR:";
             // 
-            // textBox2
+            // txtBuscar
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(419, 60);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(218, 13);
-            this.textBox2.TabIndex = 62;
+            this.txtBuscar.BackColor = System.Drawing.Color.White;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(392, 60);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(245, 13);
+            this.txtBuscar.TabIndex = 62;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // panel3
             // 
@@ -184,19 +162,57 @@
             this.panel3.Size = new System.Drawing.Size(302, 1);
             this.panel3.TabIndex = 61;
             // 
+            // rbOtrosProductos
+            // 
+            this.rbOtrosProductos.AutoSize = true;
+            this.rbOtrosProductos.Location = new System.Drawing.Point(516, 96);
+            this.rbOtrosProductos.Name = "rbOtrosProductos";
+            this.rbOtrosProductos.Size = new System.Drawing.Size(101, 17);
+            this.rbOtrosProductos.TabIndex = 69;
+            this.rbOtrosProductos.TabStop = true;
+            this.rbOtrosProductos.Text = "Otros Productos";
+            this.rbOtrosProductos.UseVisualStyleBackColor = true;
+            this.rbOtrosProductos.CheckedChanged += new System.EventHandler(this.rbOtrosProductos_CheckedChanged);
+            // 
+            // rbRepuesto
+            // 
+            this.rbRepuesto.AutoSize = true;
+            this.rbRepuesto.Location = new System.Drawing.Point(293, 96);
+            this.rbRepuesto.Name = "rbRepuesto";
+            this.rbRepuesto.Size = new System.Drawing.Size(71, 17);
+            this.rbRepuesto.TabIndex = 70;
+            this.rbRepuesto.TabStop = true;
+            this.rbRepuesto.Text = "Repuesto";
+            this.rbRepuesto.UseVisualStyleBackColor = true;
+            this.rbRepuesto.CheckedChanged += new System.EventHandler(this.rbRepuesto_CheckedChanged);
+            // 
+            // rbServicio
+            // 
+            this.rbServicio.AutoSize = true;
+            this.rbServicio.Location = new System.Drawing.Point(409, 96);
+            this.rbServicio.Name = "rbServicio";
+            this.rbServicio.Size = new System.Drawing.Size(63, 17);
+            this.rbServicio.TabIndex = 71;
+            this.rbServicio.TabStop = true;
+            this.rbServicio.Text = "Servicio";
+            this.rbServicio.UseVisualStyleBackColor = true;
+            this.rbServicio.CheckedChanged += new System.EventHandler(this.rbServicio_CheckedChanged);
+            // 
             // Buscar_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(854, 298);
+            this.Controls.Add(this.rbServicio);
+            this.Controls.Add(this.rbRepuesto);
+            this.Controls.Add(this.rbOtrosProductos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Gestionar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgv_BuscarProducto);
-            this.Controls.Add(this.btnBuscarPro_pantBuscarProducto);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label2);
@@ -223,11 +239,11 @@
         private System.Windows.Forms.Button btn_Gestionar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_BuscarProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.Button btnBuscarPro_pantBuscarProducto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton rbOtrosProductos;
+        private System.Windows.Forms.RadioButton rbRepuesto;
+        private System.Windows.Forms.RadioButton rbServicio;
     }
 }

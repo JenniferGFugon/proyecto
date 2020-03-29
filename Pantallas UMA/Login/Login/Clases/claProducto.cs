@@ -248,7 +248,7 @@ namespace Login.Clases
         {
             Boolean r = false;
            
-            r = conexion.Ejecutar(string.Format("INSERT INTO producto_general (id_tip_producto,precio_compra,nombre_producto,marca,existencia,precio_venta) values({0},{1},'{2}','{3}','{4}',{5});", 1,precio_compra,nombre,marca,existencia,precio_venta));
+            r = conexion.Ejecutar(string.Format("INSERT INTO producto_general (id_tipo_producto,precio_compra,nombre,marca,existencia,precio_venta) values({0},{1},'{2}','{3}','{4}',{5});", 1,precio_compra,nombre,marca,existencia,precio_venta));
 
             return r;
         }
@@ -258,7 +258,7 @@ namespace Login.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("INSERT INTO repuesto (id_tip_producto,id_cat_producto,nombre,marca,modelo,año,fabricante,precio_compra,precio_venta,existencia) values({0},{1},{2},{3},{4},{5},{6},{7},{8},{9});", 2,id_categoria_producto, nombre,marca,modelo,año,fabricante,precio_compra,precio_venta,existencia ));
+            r = conexion.Ejecutar(string.Format("INSERT INTO repuesto (id_tipo_producto,id_categoria_producto,nombre,marca,modelo,año,fabricante,precio_compra,precio_venta,existencia) values({0},{1},'{2}','{3}','{4}',{5},'{6}',{7},{8},{9});", 2,id_categoria_producto, nombre,marca,modelo,año,fabricante,precio_compra,precio_venta,existencia ));
 
             return r;
         }
@@ -268,7 +268,7 @@ namespace Login.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("insert into servicio (id_tip_producto,nombre_servicio,precio) values({0},'{1}',{2});", 3, nombre,precio_venta));
+            r = conexion.Ejecutar(string.Format("insert into servicio (id_tipo_producto,nombre,precio) values({0},'{1}',{2});", 3, nombre,precio_venta));
 
             return r;
         }

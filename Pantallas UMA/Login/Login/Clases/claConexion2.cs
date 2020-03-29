@@ -18,30 +18,45 @@ class claConexion2
             usuario = "root";
             pass = "jj4107av";
             servidor = "127.0.0.1";
-        
+        conexion = new MySqlConnection();
 
-        }
+    }
+    public claConexion2(string b, string se, string u, string p)
+    {
+        BD = b;
+        servidor = se;
+        usuario = u;
+        pass = p;
+        conexion = new MySqlConnection();
+    }
 
-        //constructor
-        public Boolean Establecerconexion()
+    //constructor
+    public void Establecerconexion()
         {
-            Boolean r = false;
+            
         try
         {
-            if (conexion.State == System.Data.ConnectionState.Open)
+            if (conexion.State == System.Data.ConnectionState.Closed)
+            {
+                conexion.ConnectionString = string.Format("Database = {0}; Server = {1} ; Uid = {2};Pwd = {3};SslMode = none ", BD, servidor, usuario, pass);
+                conexion.Open();
+                
+            }
+            else
             {
                 conexion.Close();
-            }
-            conexion.ConnectionString = string.Format("Database = {0}; Server = {1} ; Uid = {2};Pwd = {3};SslMode = none ", BD, servidor, usuario, pass);
+                conexion.ConnectionString = string.Format("Database = {0}; Server = {1} ; Uid = {2};Pwd = {3};SslMode = none ", BD, servidor, usuario, pass);
                 conexion.Open();
-                r = true;
+
+            }
+               
             }
             catch (MySqlException e)
             {
                 System.Windows.Forms.MessageBox.Show(string.Format("Error: {0}", e.ToString()));
-                r = false;
+               
             }
-            return r;
+            
         }
 
         public DataTable consulta(string sql)

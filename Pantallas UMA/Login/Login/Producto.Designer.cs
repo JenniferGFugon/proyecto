@@ -106,6 +106,7 @@
             this.label2.TabIndex = 21;
             this.label2.Text = "INGRESAR PRODUCTOS";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_Salir
             // 
@@ -427,6 +428,7 @@
             this.btn_guardar_repuesto.TabIndex = 86;
             this.btn_guardar_repuesto.Text = "Ingresar Producto";
             this.btn_guardar_repuesto.UseVisualStyleBackColor = true;
+            this.btn_guardar_repuesto.Click += new System.EventHandler(this.btn_guardar_repuesto_Click_1);
             // 
             // cmbCategorias
             // 
@@ -435,6 +437,7 @@
             this.cmbCategorias.Name = "cmbCategorias";
             this.cmbCategorias.Size = new System.Drawing.Size(205, 24);
             this.cmbCategorias.TabIndex = 81;
+            this.cmbCategorias.SelectedIndexChanged += new System.EventHandler(this.cmbCategorias_SelectedIndexChanged);
             // 
             // label20
             // 
@@ -452,7 +455,6 @@
             this.txt_Fabricante.Name = "txt_Fabricante";
             this.txt_Fabricante.Size = new System.Drawing.Size(208, 23);
             this.txt_Fabricante.TabIndex = 77;
-            //this.txt_Fabricante.TextChanged += new System.EventHandler(this.txt_Fabricante_TextChanged);
             // 
             // label18
             // 

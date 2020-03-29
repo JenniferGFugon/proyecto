@@ -150,5 +150,39 @@ namespace Login
                 MessageBox.Show("Error");
             }
         }
+
+        private void cmbCategorias_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_guardar_repuesto_Click_1(object sender, EventArgs e)
+        {
+            claProducto repuesto = new claProducto();
+            repuesto.Nombre = txt_NombreRepuesto.Text;
+            repuesto.Id_Categoria_Producto = Convert.ToInt32( cmbCategorias.SelectedValue);
+            repuesto.Marca = txt_MarcaRepuesto.Text;
+            repuesto.Modelo = txt_ModeloRepuesto.Text;
+            repuesto.Año = Convert.ToInt32( txt_Anio.Text);
+            repuesto.Fabricante = txt_Fabricante.Text;
+            repuesto.Precio_venta = Convert.ToDecimal(txt_PrecioVentaRepuesto .Text);
+            repuesto.Precio_compra = Convert.ToDecimal(txt_PrecioCompraRepuesto.Text);
+            repuesto.Existencia = Convert.ToInt32(txt_CantidadRepuesto.Text);
+
+
+            if (repuesto.GuardarRepuesto())
+            {
+                MessageBox.Show("Producto Guardado");
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+        }
     }
 }
