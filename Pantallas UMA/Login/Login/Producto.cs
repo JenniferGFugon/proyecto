@@ -71,8 +71,7 @@ namespace Login
 
        
        
-
-        private void btn_Ingresar_Click_1(object sender, EventArgs e)
+        public void GuardarProductoGeneral()
         {
             claProducto producto = new claProducto();
             producto.Nombre = txt_NombreProducto.Text;
@@ -89,6 +88,10 @@ namespace Login
             {
                 MessageBox.Show("Error");
             }
+        }
+        private void btn_Ingresar_Click_1(object sender, EventArgs e)
+        {
+            GuardarProductoGeneral();
         }
 
         private void btn_guardar_repuesto_Click(object sender, EventArgs e)
@@ -120,18 +123,16 @@ namespace Login
             cmbCategorias.DataSource = t1;
             cmbCategorias.DisplayMember = "nombre_categoria";
             cmbCategorias.ValueMember = "id_categoria_producto";
+            btn_LimpiarPantallaP.Visible = true;
+            
+
         }
 
       
 
         private void btn_LimpiarPantalla_Click(object sender, EventArgs e)
         {
-            txt_IDProducto.Clear();
-            txt_NombreProducto.Clear();
-            txt_MarcaProducto.Clear();
-            txt_PrecioVentaProducto.Clear();
-            txt_CantidadProducto.Clear();
-            txt_PrecioCompraProducto.Clear();
+            limpiarPantallaPro();
         }
 
         private void IngresarServicio_Click(object sender, EventArgs e)
@@ -183,6 +184,95 @@ namespace Login
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void btn_Modificar_Click(object sender, EventArgs e)
+        {
+            btn_Ingresar.Visible = false;
+            btn_Modificar.Visible = false;
+            btn_Eliminar.Visible = false;
+            //btn_BuscarProducto.Visible = true;
+           // btnGuardarCambios.Visible = true;
+            txt_IDProducto.Visible = true;
+            btn_LimpiarPantallaP.Location = new Point(459, 200);
+            claProducto producto = new claProducto();
+            //producto.IdProducto = Convert.ToInt32(txt_IDProducto.Text);
+            producto.Nombre = txt_NombreProducto.Text;
+            producto.Marca = txt_MarcaProducto.Text;
+            producto.Precio_venta = Convert.ToDecimal(txt_PrecioVentaProducto.Text);
+            producto.Precio_compra = Convert.ToDecimal(txt_PrecioCompraProducto.Text);
+            producto.Existencia = Convert.ToInt32(txt_CantidadProducto.Text);
+
+
+            if (producto.ModificarProductoGeneral())
+            {
+                MessageBox.Show("Producto Modificado","Confirmacion",MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Error");
+            }
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            
+            btn_LimpiarPantallaP.Location = new Point(459, 220);
+            btn_Eliminar.Visible = true;
+
+        }
+
+       
+        public void llenarProductoGeneral()
+        {
+          
+            
+                DataTable t1 = productos.SQL(String.Format("SELECT  nombre , marca,precio_venta , precio_compra , existencia FROM producto_general where id_producto_general = {0} ; ", txt_IDProducto.Text));
+               if(t1.Rows.Count != 0)
+                 {
+                txt_NombreProducto.Text = t1.Rows[0]["nombre"].ToString();
+                txt_MarcaProducto.Text = t1.Rows[0]["marca"].ToString();
+                txt_PrecioVentaProducto.Text = t1.Rows[0]["precio_venta"].ToString();
+                txt_PrecioCompraProducto.Text = t1.Rows[0]["precio_compra"].ToString();
+                txt_CantidadProducto.Text = t1.Rows[0]["existencia"].ToString();
+                btn_LimpiarPantallaP.Visible = true;
+            }
+               else
+            {
+                MessageBox.Show("El producto no existe");
+            }
+                    
+   
+
+        }
+         public void limpiarPantallaPro()
+        {
+            txt_IDProducto.Text = "";
+            txt_NombreProducto.Text = "";
+            txt_MarcaProducto.Text = "";
+            txt_PrecioVentaProducto.Text = "";
+            txt_PrecioCompraProducto.Text = "";
+            txt_CantidadProducto.Text = "";
+        }
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+            btn_Ingresar.Visible = false;
+            btnCancelar.Visible = true;
+
+         if(txt_IDProducto.Text != "")
+            {
+                llenarProductoGeneral();
+            }
+            else
+            {
+                MessageBox.Show("Ingrese el producto a buscar");
+            }        
+          
+           
+           
+            
         }
     }
 }

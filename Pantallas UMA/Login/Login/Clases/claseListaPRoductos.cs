@@ -49,7 +49,7 @@ namespace Login.Clases
         public DataTable SQL(string sql)
         {
          
-   DataTable t = conexion.consulta(sql);
+            DataTable t = conexion.consulta(sql);
             return t;
         }
     }

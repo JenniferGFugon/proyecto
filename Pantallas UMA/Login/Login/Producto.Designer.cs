@@ -33,9 +33,10 @@
             this.btn_Salir = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Producto_general = new System.Windows.Forms.TabPage();
+            this.btnbuscar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.btn_LimpiarPantalla = new System.Windows.Forms.Button();
+            this.btn_LimpiarPantallaP = new System.Windows.Forms.Button();
             this.btn_Ingresar = new System.Windows.Forms.Button();
             this.txt_PrecioCompraProducto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,9 +48,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_NombreProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_BuscarProducto = new System.Windows.Forms.Button();
             this.txt_IDProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -133,14 +134,15 @@
             this.tabControl1.Location = new System.Drawing.Point(275, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(608, 488);
+            this.tabControl1.Size = new System.Drawing.Size(608, 423);
             this.tabControl1.TabIndex = 42;
             // 
             // Producto_general
             // 
+            this.Producto_general.Controls.Add(this.btnbuscar);
             this.Producto_general.Controls.Add(this.btn_Modificar);
             this.Producto_general.Controls.Add(this.btn_Eliminar);
-            this.Producto_general.Controls.Add(this.btn_LimpiarPantalla);
+            this.Producto_general.Controls.Add(this.btn_LimpiarPantallaP);
             this.Producto_general.Controls.Add(this.btn_Ingresar);
             this.Producto_general.Controls.Add(this.txt_PrecioCompraProducto);
             this.Producto_general.Controls.Add(this.label8);
@@ -152,15 +154,30 @@
             this.Producto_general.Controls.Add(this.label4);
             this.Producto_general.Controls.Add(this.txt_NombreProducto);
             this.Producto_general.Controls.Add(this.label3);
-            this.Producto_general.Controls.Add(this.btn_BuscarProducto);
             this.Producto_general.Controls.Add(this.txt_IDProducto);
             this.Producto_general.Controls.Add(this.label1);
+            this.Producto_general.Controls.Add(this.btnCancelar);
             this.Producto_general.Location = new System.Drawing.Point(4, 25);
             this.Producto_general.Name = "Producto_general";
-            this.Producto_general.Size = new System.Drawing.Size(600, 459);
+            this.Producto_general.Size = new System.Drawing.Size(600, 394);
             this.Producto_general.TabIndex = 0;
             this.Producto_general.Text = "Producto General";
             this.Producto_general.UseVisualStyleBackColor = true;
+            // 
+            // btnbuscar
+            // 
+            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnbuscar.Location = new System.Drawing.Point(324, 30);
+            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnbuscar.Name = "btnbuscar";
+            this.btnbuscar.Size = new System.Drawing.Size(73, 30);
+            this.btnbuscar.TabIndex = 63;
+            this.btnbuscar.Text = "Buscar";
+            this.btnbuscar.UseVisualStyleBackColor = true;
+            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btn_Modificar
             // 
@@ -168,13 +185,14 @@
             this.btn_Modificar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Modificar.ForeColor = System.Drawing.Color.Black;
             this.btn_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Modificar.Location = new System.Drawing.Point(459, 115);
+            this.btn_Modificar.Location = new System.Drawing.Point(460, 108);
             this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(73, 56);
             this.btn_Modificar.TabIndex = 60;
             this.btn_Modificar.Text = "Modificar Producto";
             this.btn_Modificar.UseVisualStyleBackColor = true;
+            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Eliminar
             // 
@@ -182,7 +200,7 @@
             this.btn_Eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.Color.Black;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar.Location = new System.Drawing.Point(459, 203);
+            this.btn_Eliminar.Location = new System.Drawing.Point(459, 200);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(73, 56);
@@ -190,20 +208,20 @@
             this.btn_Eliminar.Text = "Eliminar Producto";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
             // 
-            // btn_LimpiarPantalla
+            // btn_LimpiarPantallaP
             // 
-            this.btn_LimpiarPantalla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_LimpiarPantalla.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LimpiarPantalla.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarPantalla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimpiarPantalla.Location = new System.Drawing.Point(459, 290);
-            this.btn_LimpiarPantalla.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_LimpiarPantalla.Name = "btn_LimpiarPantalla";
-            this.btn_LimpiarPantalla.Size = new System.Drawing.Size(73, 56);
-            this.btn_LimpiarPantalla.TabIndex = 59;
-            this.btn_LimpiarPantalla.Text = "Limpiar Pantalla";
-            this.btn_LimpiarPantalla.UseVisualStyleBackColor = true;
-            this.btn_LimpiarPantalla.Click += new System.EventHandler(this.btn_LimpiarPantalla_Click);
+            this.btn_LimpiarPantallaP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_LimpiarPantallaP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LimpiarPantallaP.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarPantallaP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(459, 290);
+            this.btn_LimpiarPantallaP.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LimpiarPantallaP.Name = "btn_LimpiarPantallaP";
+            this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(73, 56);
+            this.btn_LimpiarPantallaP.TabIndex = 59;
+            this.btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
+            this.btn_LimpiarPantallaP.UseVisualStyleBackColor = true;
+            this.btn_LimpiarPantallaP.Click += new System.EventHandler(this.btn_LimpiarPantalla_Click);
             // 
             // btn_Ingresar
             // 
@@ -211,12 +229,12 @@
             this.btn_Ingresar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ingresar.ForeColor = System.Drawing.Color.Black;
             this.btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Ingresar.Location = new System.Drawing.Point(459, 29);
+            this.btn_Ingresar.Location = new System.Drawing.Point(460, 30);
             this.btn_Ingresar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(73, 56);
             this.btn_Ingresar.TabIndex = 57;
-            this.btn_Ingresar.Text = "Ingresar Producto";
+            this.btn_Ingresar.Text = "Guardar Producto";
             this.btn_Ingresar.UseVisualStyleBackColor = true;
             this.btn_Ingresar.Click += new System.EventHandler(this.btn_Ingresar_Click_1);
             // 
@@ -305,28 +323,12 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombre";
             // 
-            // btn_BuscarProducto
-            // 
-            this.btn_BuscarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_BuscarProducto.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BuscarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btn_BuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BuscarProducto.Location = new System.Drawing.Point(306, 30);
-            this.btn_BuscarProducto.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_BuscarProducto.Name = "btn_BuscarProducto";
-            this.btn_BuscarProducto.Size = new System.Drawing.Size(72, 36);
-            this.btn_BuscarProducto.TabIndex = 44;
-            this.btn_BuscarProducto.Text = "Buscar";
-            this.btn_BuscarProducto.UseVisualStyleBackColor = true;
-            this.btn_BuscarProducto.Visible = false;
-            // 
             // txt_IDProducto
             // 
             this.txt_IDProducto.Location = new System.Drawing.Point(157, 37);
             this.txt_IDProducto.Name = "txt_IDProducto";
             this.txt_IDProducto.Size = new System.Drawing.Size(100, 23);
             this.txt_IDProducto.TabIndex = 1;
-            this.txt_IDProducto.Visible = false;
             // 
             // label1
             // 
@@ -337,7 +339,21 @@
             this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            this.label1.Visible = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(459, 30);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(73, 56);
+            this.btnCancelar.TabIndex = 62;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // tabPage4
             // 
@@ -368,7 +384,7 @@
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(600, 459);
+            this.tabPage4.Size = new System.Drawing.Size(600, 394);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Repuesto";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -634,7 +650,7 @@
             this.tabPage5.Controls.Add(this.label26);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(600, 459);
+            this.tabPage5.Size = new System.Drawing.Size(600, 394);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Servicio";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -771,7 +787,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 534);
+            this.panel1.Size = new System.Drawing.Size(248, 465);
             this.panel1.TabIndex = 3;
             // 
             // Producto
@@ -779,7 +795,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(912, 601);
+            this.ClientSize = new System.Drawing.Size(912, 512);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.label2);
@@ -808,7 +824,6 @@
         private System.Windows.Forms.TabPage Producto_general;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button btn_BuscarProducto;
         private System.Windows.Forms.TextBox txt_IDProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_NombreProducto;
@@ -852,7 +867,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Button btn_LimpiarPantalla;
+        private System.Windows.Forms.Button btn_LimpiarPantallaP;
         private System.Windows.Forms.Button btn_Ingresar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -862,5 +877,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button IngresarServicio;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnbuscar;
     }
 }
