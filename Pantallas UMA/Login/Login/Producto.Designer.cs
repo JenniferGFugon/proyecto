@@ -50,7 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txt_IDProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -156,7 +155,6 @@
             this.Producto_general.Controls.Add(this.label3);
             this.Producto_general.Controls.Add(this.txt_IDProducto);
             this.Producto_general.Controls.Add(this.label1);
-            this.Producto_general.Controls.Add(this.btnCancelar);
             this.Producto_general.Location = new System.Drawing.Point(4, 25);
             this.Producto_general.Name = "Producto_general";
             this.Producto_general.Size = new System.Drawing.Size(600, 394);
@@ -185,7 +183,7 @@
             this.btn_Modificar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Modificar.ForeColor = System.Drawing.Color.Black;
             this.btn_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Modificar.Location = new System.Drawing.Point(460, 108);
+            this.btn_Modificar.Location = new System.Drawing.Point(460, 137);
             this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(73, 56);
@@ -200,13 +198,14 @@
             this.btn_Eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.Color.Black;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar.Location = new System.Drawing.Point(459, 200);
+            this.btn_Eliminar.Location = new System.Drawing.Point(460, 212);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(73, 56);
             this.btn_Eliminar.TabIndex = 58;
             this.btn_Eliminar.Text = "Eliminar Producto";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
+            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
             // btn_LimpiarPantallaP
             // 
@@ -214,7 +213,7 @@
             this.btn_LimpiarPantallaP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LimpiarPantallaP.ForeColor = System.Drawing.Color.Black;
             this.btn_LimpiarPantallaP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(459, 290);
+            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(460, 290);
             this.btn_LimpiarPantallaP.Margin = new System.Windows.Forms.Padding(2);
             this.btn_LimpiarPantallaP.Name = "btn_LimpiarPantallaP";
             this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(73, 56);
@@ -229,7 +228,7 @@
             this.btn_Ingresar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ingresar.ForeColor = System.Drawing.Color.Black;
             this.btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Ingresar.Location = new System.Drawing.Point(460, 30);
+            this.btn_Ingresar.Location = new System.Drawing.Point(460, 62);
             this.btn_Ingresar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(73, 56);
@@ -312,6 +311,7 @@
             this.txt_NombreProducto.Name = "txt_NombreProducto";
             this.txt_NombreProducto.Size = new System.Drawing.Size(238, 23);
             this.txt_NombreProducto.TabIndex = 46;
+            this.txt_NombreProducto.TextChanged += new System.EventHandler(this.txt_NombreProducto_TextChanged);
             // 
             // label3
             // 
@@ -339,21 +339,6 @@
             this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(459, 30);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(73, 56);
-            this.btnCancelar.TabIndex = 62;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // tabPage4
             // 
@@ -395,7 +380,7 @@
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(476, 131);
+            this.button1.Location = new System.Drawing.Point(415, 131);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(73, 56);
@@ -437,7 +422,7 @@
             this.btn_guardar_repuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar_repuesto.ForeColor = System.Drawing.Color.Black;
             this.btn_guardar_repuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_repuesto.Location = new System.Drawing.Point(476, 45);
+            this.btn_guardar_repuesto.Location = new System.Drawing.Point(443, 62);
             this.btn_guardar_repuesto.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar_repuesto.Name = "btn_guardar_repuesto";
             this.btn_guardar_repuesto.Size = new System.Drawing.Size(73, 56);
@@ -877,7 +862,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button IngresarServicio;
-        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnbuscar;
     }
 }

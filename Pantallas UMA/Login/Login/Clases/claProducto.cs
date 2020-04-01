@@ -277,12 +277,19 @@ namespace Login.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("UPDATE producto_general SET nombre = '{0}' , marca = '{1}' , precio_venta = {2} , precio_compra = {3} ,existencia = {4}  where id_producto_general = {5};", nombre, marca,precio_venta,precio_compra,existencia,IdProducto));
-            
+            r = conexion.Ejecutar(string.Format("UPDATE producto_general SET nombre = '{0}' ,marca = '{1}' ,precio_venta = {2} ,precio_compra = {3} ,existencia ={4}  where id_producto_general = {5};",Nombre,Marca,Precio_venta,Precio_compra,Existencia,IdProducto));
+                
             return r;
         }
 
+        public Boolean EliminarProductoGeneral()
+        {
+            Boolean r = false;
 
+            r = conexion.Ejecutar(string.Format(" DELETE  from producto_general where id_producto_general = {0} ; ",IdProducto));
+
+            return r;
+        }
     }
 }
     

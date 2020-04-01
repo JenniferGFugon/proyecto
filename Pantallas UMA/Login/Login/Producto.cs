@@ -73,6 +73,8 @@ namespace Login
        
         public void GuardarProductoGeneral()
         {
+            txt_IDProducto.Enabled = true;
+            btnbuscar.Enabled = true;
             claProducto producto = new claProducto();
             producto.Nombre = txt_NombreProducto.Text;
             producto.Marca = txt_MarcaProducto.Text;
@@ -81,7 +83,10 @@ namespace Login
             producto.Existencia = Convert.ToInt32(txt_CantidadProducto.Text);
             if (producto.GuardarProductoGeneral())
             {
+               
+                limpiarPantallaPro();
                 MessageBox.Show("Producto Guardado");
+                
 
             }
             else
@@ -132,7 +137,20 @@ namespace Login
 
         private void btn_LimpiarPantalla_Click(object sender, EventArgs e)
         {
-            limpiarPantallaPro();
+           
+            if (btn_LimpiarPantallaP.Text == "Cancelar")
+            {
+                limpiarPantallaPro();
+                btn_Ingresar.Visible = true;
+                btn_LimpiarPantallaP.Location = new Point(460, 290);
+                btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
+
+            }
+            else
+            {
+                limpiarPantallaPro();
+            }
+            
         }
 
         private void IngresarServicio_Click(object sender, EventArgs e)
@@ -189,14 +207,16 @@ namespace Login
         private void btn_Modificar_Click(object sender, EventArgs e)
         {
             btn_Ingresar.Visible = false;
-            btn_Modificar.Visible = false;
-            btn_Eliminar.Visible = false;
-            //btn_BuscarProducto.Visible = true;
-           // btnGuardarCambios.Visible = true;
+            btn_Ingresar.Visible = true;
+            //btnCancelar.Visible = true;
+            btn_Eliminar.Visible = true;
+            //btnCancelar.Visible = true;
+            btn_LimpiarPantallaP.Visible = true;
             txt_IDProducto.Visible = true;
-            btn_LimpiarPantallaP.Location = new Point(459, 200);
+            btn_LimpiarPantallaP.Location = new Point(460, 290);
+            btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
             claProducto producto = new claProducto();
-            //producto.IdProducto = Convert.ToInt32(txt_IDProducto.Text);
+            producto.IdProducto = Convert.ToInt32( txt_IDProducto.Text);
             producto.Nombre = txt_NombreProducto.Text;
             producto.Marca = txt_MarcaProducto.Text;
             producto.Precio_venta = Convert.ToDecimal(txt_PrecioVentaProducto.Text);
@@ -207,6 +227,9 @@ namespace Login
             if (producto.ModificarProductoGeneral())
             {
                 MessageBox.Show("Producto Modificado","Confirmacion",MessageBoxButtons.OK);
+                limpiarPantallaPro();
+                btn_Ingresar.Visible = true;
+                
             }
             else
             {
@@ -215,14 +238,7 @@ namespace Login
 
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            
-            btn_LimpiarPantallaP.Location = new Point(459, 220);
-            btn_Eliminar.Visible = true;
-
-        }
-
+      
        
         public void llenarProductoGeneral()
         {
@@ -241,6 +257,9 @@ namespace Login
                else
             {
                 MessageBox.Show("El producto no existe");
+                btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
+                btn_Ingresar.Visible = true;
+                btn_LimpiarPantallaP.Location = new Point(460, 290);
             }
                     
    
@@ -259,9 +278,10 @@ namespace Login
         private void btnbuscar_Click(object sender, EventArgs e)
         {
             btn_Ingresar.Visible = false;
-            btnCancelar.Visible = true;
+            btn_LimpiarPantallaP.Text = "Cancelar";
+            btn_LimpiarPantallaP.Location = new Point(460, 56);
 
-         if(txt_IDProducto.Text != "")
+            if (txt_IDProducto.Text != "")
             {
                 llenarProductoGeneral();
             }
@@ -273,6 +293,46 @@ namespace Login
            
            
             
+        }
+
+        private void btn_Eliminar_Click(object sender, EventArgs e)
+        {
+            if(txt_IDProducto.Text == "" )
+            {
+                MessageBox.Show("Ingrese producto a eliminar");
+            }
+            else
+            {
+                claProducto producto = new claProducto();
+                producto.IdProducto = Convert.ToInt32(txt_IDProducto.Text);
+         
+
+                if (producto.EliminarProductoGeneral())
+                {
+                    MessageBox.Show("Producto Eliminado", "Confirmacion", MessageBoxButtons.OK);
+                    limpiarPantallaPro();
+                    btn_Ingresar.Visible = true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Error");
+                }
+            }
+        }
+
+        private void txt_NombreProducto_TextChanged(object sender, EventArgs e)
+        {
+            if(txt_NombreProducto.Text != "")
+            {
+                txt_IDProducto.Enabled = false;
+                btnbuscar.Enabled = false;
+            }
+            else
+            {
+                txt_IDProducto.Enabled = true;
+                btnbuscar.Enabled =true;
+            }
         }
     }
 }
