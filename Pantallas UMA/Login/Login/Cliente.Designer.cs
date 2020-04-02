@@ -57,10 +57,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_IdentidadCliente = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.btnIngresarCliente = new System.Windows.Forms.Button();
-            this.btnEliminarCliente = new System.Windows.Forms.Button();
+            this.btnModificarCliente = new System.Windows.Forms.Button();
+            this.btnGuardarCliente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnBuscarCLiente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -378,33 +378,35 @@
             this.panel9.Size = new System.Drawing.Size(302, 1);
             this.panel9.TabIndex = 65;
             // 
-            // btnIngresarCliente
+            // btnModificarCliente
             // 
-            this.btnIngresarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnIngresarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnIngresarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnIngresarCliente.Location = new System.Drawing.Point(592, 167);
-            this.btnIngresarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIngresarCliente.Name = "btnIngresarCliente";
-            this.btnIngresarCliente.Size = new System.Drawing.Size(87, 48);
-            this.btnIngresarCliente.TabIndex = 67;
-            this.btnIngresarCliente.Text = "MODIFICAR";
-            this.btnIngresarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnModificarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarCliente.Location = new System.Drawing.Point(592, 167);
+            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnModificarCliente.Name = "btnModificarCliente";
+            this.btnModificarCliente.Size = new System.Drawing.Size(87, 48);
+            this.btnModificarCliente.TabIndex = 67;
+            this.btnModificarCliente.Text = "MODIFICAR";
+            this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
-            // btnEliminarCliente
+            // btnGuardarCliente
             // 
-            this.btnEliminarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEliminarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarCliente.Location = new System.Drawing.Point(592, 106);
-            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(87, 48);
-            this.btnEliminarCliente.TabIndex = 68;
-            this.btnEliminarCliente.Text = "AGREGAR";
-            this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGuardarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarCliente.Location = new System.Drawing.Point(592, 106);
+            this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGuardarCliente.Name = "btnGuardarCliente";
+            this.btnGuardarCliente.Size = new System.Drawing.Size(87, 48);
+            this.btnGuardarCliente.TabIndex = 68;
+            this.btnGuardarCliente.Text = "AGREGAR";
+            this.btnGuardarCliente.UseVisualStyleBackColor = true;
+            this.btnGuardarCliente.Click += new System.EventHandler(this.BtnGuardarCliente_Click);
             // 
             // button1
             // 
@@ -420,20 +422,21 @@
             this.button1.Text = "GUARDAR CAMBIOS";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnBuscarCLiente
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(592, 54);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 30);
-            this.button2.TabIndex = 70;
-            this.button2.Text = "BUSCAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
+            this.btnBuscarCLiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarCLiente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCLiente.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarCLiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCLiente.Location = new System.Drawing.Point(592, 54);
+            this.btnBuscarCLiente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCLiente.Name = "btnBuscarCLiente";
+            this.btnBuscarCLiente.Size = new System.Drawing.Size(87, 30);
+            this.btnBuscarCLiente.TabIndex = 70;
+            this.btnBuscarCLiente.Text = "BUSCAR";
+            this.btnBuscarCLiente.UseVisualStyleBackColor = true;
+            this.btnBuscarCLiente.Visible = false;
+            this.btnBuscarCLiente.Click += new System.EventHandler(this.BtnBuscarCLiente_Click);
             // 
             // Cliente
             // 
@@ -441,9 +444,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 298);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnEliminarCliente);
-            this.Controls.Add(this.btnIngresarCliente);
+            this.Controls.Add(this.btnBuscarCLiente);
+            this.Controls.Add(this.btnGuardarCliente);
+            this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_IdentidadCliente);
             this.Controls.Add(this.panel9);
@@ -513,9 +516,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txt_IdentidadCliente;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnIngresarCliente;
-        private System.Windows.Forms.Button btnEliminarCliente;
+        private System.Windows.Forms.Button btnModificarCliente;
+        private System.Windows.Forms.Button btnGuardarCliente;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBuscarCLiente;
     }
 }

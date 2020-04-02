@@ -102,7 +102,6 @@
     <Compile Include="Clases\claConexion2.cs" />
     <Compile Include="Clases\claProducto.cs" />
     <Compile Include="Clases\claseListaPRoductos.cs" />
-    <Compile Include="Clases\clase_venta.cs" />
     <Compile Include="Clases\Class1.cs" />
     <Compile Include="Buscar_Productos.cs">
       <SubType>Form</SubType>
@@ -110,6 +109,7 @@
     <Compile Include="Buscar_Productos.Designer.cs">
       <DependentUpon>Buscar_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\cliente.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
