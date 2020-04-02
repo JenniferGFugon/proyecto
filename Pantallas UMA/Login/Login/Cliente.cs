@@ -31,6 +31,7 @@ namespace Login
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soloNumeros(e);
+           
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -67,58 +68,59 @@ namespace Login
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txt_IdCategoriaClien.Clear();
-            txt_IdCliente.Clear();
-            txt_NombreCliente.Clear();
-            txt_TelefonoCliente.Clear();
-            txt_CorreoCliente.Clear();
-            txt_DireccionCliente.Clear();
-            txt_RTNCliente.Clear();
-            txt_IdentidadCliente.Clear();
+            limpiar();
         }
 
         private void BtnGuardarCliente_Click(object sender, EventArgs e)
         {
-            cliente cliente = new cliente();
-            cliente.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
-            cliente.Nombre_Cliente = Convert.ToString(txt_NombreCliente.Text);
-            cliente.TelefonoCliente = Convert.ToString(txt_TelefonoCliente.Text);
-            cliente.Coreo_electronico = Convert.ToString(txt_CorreoCliente.Text);
-            cliente.Direccion = Convert.ToString(txt_DireccionCliente.Text);
-            cliente.Rtn = Convert.ToString(txt_RTNCliente.Text);
-            cliente.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
-
-
-            if (cliente.GuardarCliente())
+            if(btnGuardarCliente.Text == "AGREGAR")
             {
-                MessageBox.Show("Cliente guardado exitosamente");
+                cliente cliente = new cliente();
+                cliente.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
+                cliente.Nombre_Cliente = Convert.ToString(txt_NombreCliente.Text);
+                cliente.TelefonoCliente = Convert.ToString(txt_TelefonoCliente.Text);
+                cliente.Coreo_electronico = Convert.ToString(txt_CorreoCliente.Text);
+                cliente.Direccion = Convert.ToString(txt_DireccionCliente.Text);
+                cliente.Rtn = Convert.ToString(txt_RTNCliente.Text);
+                cliente.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
+
+
+                if (cliente.GuardarCliente())
+                {
+                    MessageBox.Show("Cliente guardado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("Error el cliente no a sido agregado");
+                }
             }
             else
             {
-                MessageBox.Show("Error el cliente no a sido agregado");
+                MessageBox.Show("Edicion Cancelada");
+
             }
 
+            limpiar();
+        }
 
+        private void limpiar()
+        {
+            txt_IdCliente.Text = "";
+            txt_IdCategoriaClien.Text = "";
+            txt_NombreCliente.Text = "";
+            txt_TelefonoCliente.Text = "";
+            txt_CorreoCliente.Text = "";
+            txt_DireccionCliente.Text = "";
+            txt_RTNCliente.Text = "";
+            txt_IdentidadCliente.Text = "";
+            btnGuardarCliente.Text = "AGREGAR";
+            btnGuardarCliente.Enabled = true;
+            txt_IdCliente.Enabled = true;
+            txt_IdCliente.Focus();
         }
 
         private void BtnBuscarCLiente_Click(object sender, EventArgs e)
         {
-            cliente cliente = new cliente();
-            if (Convert.ToInt32(txt_IdCliente.Text) == Convert.ToInt32(cliente.IdCliente))
-            {
-                txt_IdCategoriaClien.Text = Convert.ToString(cliente.Categoria_Cliente);
-                txt_TelefonoCliente.Text = Convert.ToString(txt_NombreCliente.Text);
-                txt_TelefonoCliente.Text = Convert.ToString(cliente.TelefonoCliente);
-                txt_CorreoCliente.Text = Convert.ToString(cliente.Coreo_electronico);
-                txt_DireccionCliente.Text = Convert.ToString(cliente.Direccion);
-                txt_RTNCliente.Text = Convert.ToString(cliente.Rtn);
-                txt_IdentidadCliente.Text = Convert.ToString(cliente.N_Identidad);
-            }
-            else
-            {
-                MessageBox.Show("No se encontro datos del cliente");
-            }
-
 
         }
 
@@ -151,7 +153,7 @@ namespace Login
 
         }
 
-        private void Txt_IdCliente_Leave(object sender, EventArgs e)
+        private void buscar(int co)
         {
             if (clientes.BuscarCLiente(Convert.ToInt32(txt_IdCliente.Text)))
             {
@@ -169,10 +171,14 @@ namespace Login
             else
             {
                 txt_IdCliente.Enabled = true;
-                btnGuardarCliente.Text = "Guardar";
+                btnGuardarCliente.Text = "AGREGAR";
                 btnModificarCliente.Enabled = false;
-
             }
+        }
+
+        private void BtnBuscarCliente_Click_1(object sender, EventArgs e)
+        {
+            buscar(Convert.ToInt32(txt_IdCliente.Text));
         }
     }
 }

@@ -59,8 +59,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnGuardarCliente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnBuscarCLiente = new System.Windows.Forms.Button();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // panel1
@@ -91,7 +90,7 @@
             this.btnLimpiarPantalla.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarPantalla.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarPantalla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarPantalla.Location = new System.Drawing.Point(592, 228);
+            this.btnLimpiarPantalla.Location = new System.Drawing.Point(592, 235);
             this.btnLimpiarPantalla.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarPantalla.Name = "btnLimpiarPantalla";
             this.btnLimpiarPantalla.Size = new System.Drawing.Size(87, 48);
@@ -301,7 +300,6 @@
             this.txt_IdCliente.Size = new System.Drawing.Size(229, 13);
             this.txt_IdCliente.TabIndex = 1;
             this.txt_IdCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
-            this.txt_IdCliente.Leave += new System.EventHandler(this.Txt_IdCliente_Leave);
             // 
             // panel3
             // 
@@ -385,7 +383,7 @@
             this.btnModificarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarCliente.ForeColor = System.Drawing.Color.Black;
             this.btnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarCliente.Location = new System.Drawing.Point(592, 167);
+            this.btnModificarCliente.Location = new System.Drawing.Point(592, 183);
             this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(87, 48);
@@ -400,7 +398,7 @@
             this.btnGuardarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarCliente.ForeColor = System.Drawing.Color.Black;
             this.btnGuardarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarCliente.Location = new System.Drawing.Point(592, 106);
+            this.btnGuardarCliente.Location = new System.Drawing.Point(592, 128);
             this.btnGuardarCliente.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarCliente.Name = "btnGuardarCliente";
             this.btnGuardarCliente.Size = new System.Drawing.Size(87, 48);
@@ -409,34 +407,20 @@
             this.btnGuardarCliente.UseVisualStyleBackColor = true;
             this.btnGuardarCliente.Click += new System.EventHandler(this.BtnGuardarCliente_Click);
             // 
-            // button1
+            // btnBuscarCliente
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(592, 165);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 48);
-            this.button1.TabIndex = 69;
-            this.button1.Text = "GUARDAR CAMBIOS";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarCLiente
-            // 
-            this.btnBuscarCLiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBuscarCLiente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCLiente.ForeColor = System.Drawing.Color.Black;
-            this.btnBuscarCLiente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarCLiente.Location = new System.Drawing.Point(592, 54);
-            this.btnBuscarCLiente.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarCLiente.Name = "btnBuscarCLiente";
-            this.btnBuscarCLiente.Size = new System.Drawing.Size(87, 30);
-            this.btnBuscarCLiente.TabIndex = 70;
-            this.btnBuscarCLiente.Text = "BUSCAR";
-            this.btnBuscarCLiente.UseVisualStyleBackColor = true;
-            this.btnBuscarCLiente.Click += new System.EventHandler(this.BtnBuscarCLiente_Click);
+            this.btnBuscarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(592, 71);
+            this.btnBuscarCliente.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(87, 48);
+            this.btnBuscarCliente.TabIndex = 69;
+            this.btnBuscarCliente.Text = "BUSCAR";
+            this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.BtnBuscarCliente_Click_1);
             // 
             // Cliente
             // 
@@ -444,7 +428,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(685, 298);
-            this.Controls.Add(this.btnBuscarCLiente);
+            this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.btnGuardarCliente);
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.label9);
@@ -475,7 +459,6 @@
             this.Controls.Add(this.btnSalir_pantCliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cliente";
@@ -518,7 +501,6 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnGuardarCliente;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnBuscarCLiente;
+        private System.Windows.Forms.Button btnBuscarCliente;
     }
 }
