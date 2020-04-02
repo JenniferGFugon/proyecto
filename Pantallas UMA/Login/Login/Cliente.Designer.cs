@@ -301,6 +301,7 @@
             this.txt_IdCliente.Size = new System.Drawing.Size(229, 13);
             this.txt_IdCliente.TabIndex = 1;
             this.txt_IdCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.txt_IdCliente.Leave += new System.EventHandler(this.Txt_IdCliente_Leave);
             // 
             // panel3
             // 
@@ -435,7 +436,6 @@
             this.btnBuscarCLiente.TabIndex = 70;
             this.btnBuscarCLiente.Text = "BUSCAR";
             this.btnBuscarCLiente.UseVisualStyleBackColor = true;
-            this.btnBuscarCLiente.Visible = false;
             this.btnBuscarCLiente.Click += new System.EventHandler(this.BtnBuscarCLiente_Click);
             // 
             // Cliente

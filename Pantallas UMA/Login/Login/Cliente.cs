@@ -151,6 +151,28 @@ namespace Login
 
         }
 
+        private void Txt_IdCliente_Leave(object sender, EventArgs e)
+        {
+            if (clientes.BuscarCLiente(Convert.ToInt32(txt_IdCliente.Text)))
+            {
+                txt_IdCategoriaClien.Text = Convert.ToString(clientes.Categoria_Cliente);
+                txt_NombreCliente.Text = clientes.Nombre_Cliente;
+                txt_TelefonoCliente.Text = clientes.TelefonoCliente;
+                txt_DireccionCliente.Text = clientes.Direccion;
+                txt_CorreoCliente.Text = clientes.Coreo_electronico;
+                txt_RTNCliente.Text = clientes.Rtn;
+                txt_IdentidadCliente.Text = clientes.N_Identidad;
+                txt_IdCliente.Enabled = false;
+                btnGuardarCliente.Text = "Cancelar";
+                btnModificarCliente.Enabled = true;
+            }
+            else
+            {
+                txt_IdCliente.Enabled = true;
+                btnGuardarCliente.Text = "Guardar";
+                btnModificarCliente.Enabled = false;
 
+            }
+        }
     }
 }

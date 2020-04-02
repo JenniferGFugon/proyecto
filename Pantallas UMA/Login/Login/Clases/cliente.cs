@@ -21,7 +21,7 @@ namespace Login.Clases
         private string RTN;
         private string N_identidad;
         private claConexion2 Conexion2;
-        private DataTable table;
+       
 
 
         public  cliente()
@@ -40,10 +40,6 @@ namespace Login.Clases
 
             }
             
-        public DataTable Table
-        {
-            get { return table; }
-        }
 
         public  int IdCliente
         {
@@ -123,24 +119,19 @@ namespace Login.Clases
         
         public Boolean BuscarCLiente(int id)
         {
-            if (Conexion2.Ejecutar(string.Format("SELECT id_categoria_cliente, nombre_cliente, numero_telefono, correo_electronico, direccion_cliente, RTN, numero_identidad  habilitado FROM cliente where id_cliente={0}", id)))
+            DataTable t1 = Conexion2.consulta(string.Format("SELECT id_categoria_cliente, nombre_cliente, numero_telefono, correo_electronico, direccion_cliente, RTN, numero_identidad  habilitado FROM cliente where id_cliente={0}", id));
+           
+            if (t1.Rows.Count > 0)
             {
-                if (table.Rows.Count > 0)
-                {
-                    Categoria_Cliente = Convert.ToInt32(table.Rows[0][1].ToString());
-                    Nombre_Cliente = table.Rows[0][2].ToString();
-                    TelefonoCliente = table.Rows[0][3].ToString();
-                    Coreo_electronico = table.Rows[0][4].ToString();
-                    Direccion = table.Rows[0][5].ToString();
-                    Rtn = table.Rows[0][6].ToString();
-                    N_Identidad = table.Rows[0][7].ToString();
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-
+                
+                categoria_cliente =  Convert.ToInt32(t1.Rows[0][0].ToString());
+                nombre_cliente = t1.Rows[0][1].ToString();
+                telefono_cliente = t1.Rows[0][2].ToString();
+                correo_electronico = t1.Rows[0][3].ToString();
+                direccion = t1.Rows[0][4].ToString();
+                RTN = t1.Rows[0][5].ToString();
+                N_identidad = t1.Rows[0][6].ToString();
+                return true;
             }
             else
             {
