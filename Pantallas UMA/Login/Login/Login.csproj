@@ -110,6 +110,8 @@
       <DependentUpon>Buscar_Productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\cliente.cs" />
+    <Compile Include="Clases\lista_Ventas.cs" />
+    <Compile Include="Clases\ventas.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
