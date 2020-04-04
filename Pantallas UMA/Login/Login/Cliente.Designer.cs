@@ -390,6 +390,7 @@
             this.btnModificarCliente.TabIndex = 67;
             this.btnModificarCliente.Text = "MODIFICAR";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
+            this.btnModificarCliente.Visible = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.BtnModificarCliente_Click);
             // 
             // btnGuardarCliente

@@ -73,34 +73,43 @@ namespace Login
 
         private void BtnGuardarCliente_Click(object sender, EventArgs e)
         {
-            if(btnGuardarCliente.Text == "AGREGAR")
+            if (txt_IdCategoriaClien.Text == string.Empty || txt_NombreCliente.Text == string.Empty || txt_DireccionCliente.Text == string.Empty || txt_IdentidadCliente.Text == string.Empty )
             {
-                cliente cliente = new cliente();
-                cliente.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
-                cliente.Nombre_Cliente = Convert.ToString(txt_NombreCliente.Text);
-                cliente.TelefonoCliente = Convert.ToString(txt_TelefonoCliente.Text);
-                cliente.Coreo_electronico = Convert.ToString(txt_CorreoCliente.Text);
-                cliente.Direccion = Convert.ToString(txt_DireccionCliente.Text);
-                cliente.Rtn = Convert.ToString(txt_RTNCliente.Text);
-                cliente.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
-
-
-                if (cliente.GuardarCliente())
-                {
-                    MessageBox.Show("Cliente guardado exitosamente");
-                }
-                else
-                {
-                    MessageBox.Show("Error el cliente no a sido agregado");
-                }
+                MessageBox.Show("Error Algunos campos obligatirios esta vacios, porfavor verifique");
             }
             else
             {
-                MessageBox.Show("Edicion Cancelada");
+                if (btnGuardarCliente.Text == "AGREGAR")
+                {
+                    cliente cliente = new cliente();
+                    cliente.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
+                    cliente.Nombre_Cliente = Convert.ToString(txt_NombreCliente.Text);
+                    cliente.TelefonoCliente = Convert.ToString(txt_TelefonoCliente.Text);
+                    cliente.Coreo_electronico = Convert.ToString(txt_CorreoCliente.Text);
+                    cliente.Direccion = Convert.ToString(txt_DireccionCliente.Text);
+                    cliente.Rtn = Convert.ToString(txt_RTNCliente.Text);
+                    cliente.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
 
+
+                    if (cliente.GuardarCliente())
+                    {
+                        MessageBox.Show("Cliente guardado exitosamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error el cliente no a sido agregado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Edicion Cancelada");
+
+                }
+
+                limpiar();
             }
 
-            limpiar();
+            
         }
 
         private void limpiar()
@@ -126,24 +135,30 @@ namespace Login
 
         private void BtnModificarCliente_Click(object sender, EventArgs e)
         {
-           
-            clientes.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
-            clientes.Nombre_Cliente= txt_NombreCliente.Text;
-            clientes.TelefonoCliente = txt_TelefonoCliente.Text;
-            clientes.Coreo_electronico = txt_CorreoCliente.Text;
-            clientes.Direccion = txt_DireccionCliente.Text;
-           // clientes.Rtn = Convert.ToString( txt_RTNCliente.Text);
-           // clientes.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
-
-            if (clientes.ModificarCliente())
+            if (txt_IdCategoriaClien.Text == string.Empty || txt_NombreCliente.Text == string.Empty || txt_DireccionCliente.Text == string.Empty || txt_IdentidadCliente.Text == string.Empty)
             {
-                MessageBox.Show("Registro actulizado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Error Algunos campos obligatirios esta vacios, porfavor verifique");
             }
             else
             {
-                MessageBox.Show("No se pudo Actualizar los datos");
+                clientes.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
+                clientes.Nombre_Cliente = txt_NombreCliente.Text;
+                clientes.TelefonoCliente = txt_TelefonoCliente.Text;
+                clientes.Coreo_electronico = txt_CorreoCliente.Text;
+                clientes.Direccion = txt_DireccionCliente.Text;
+
+                if (clientes.ModificarCliente())
+                {
+                    MessageBox.Show("Registro actulizado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo Actualizar los datos");
+                }
+                limpiar();
             }
-            limpiar();
+
+           
 
         }
 
@@ -160,19 +175,26 @@ namespace Login
                 txt_RTNCliente.Text = clientes.Rtn;
                 txt_IdentidadCliente.Text = clientes.N_Identidad;
                 txt_IdCliente.Enabled = false;
+                txt_RTNCliente.Enabled = false;
+                txt_IdentidadCliente.Enabled = false;
                 btnGuardarCliente.Text = "Cancelar";
                 btnModificarCliente.Enabled = true;
+                
             }
             else
             {
                 txt_IdCliente.Enabled = true;
+                txt_RTNCliente.Enabled = true;
+                txt_IdentidadCliente.Enabled = true;
                 btnGuardarCliente.Text = "AGREGAR";
                 btnModificarCliente.Enabled = false;
+                btnModificarCliente.Visible = false;
             }
         }
 
         private void BtnBuscarCliente_Click_1(object sender, EventArgs e)
         {
+            btnModificarCliente.Visible = true;
             buscar(Convert.ToInt32(txt_IdCliente.Text));
         }
 
