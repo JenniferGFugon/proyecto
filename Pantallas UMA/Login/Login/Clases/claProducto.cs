@@ -23,7 +23,7 @@ namespace Login.Clases
         private int año;
         private string fabricante;
         private claConexion2 conexion;
-        private DataTable tabla;
+        //private DataTable tabla;
         //constructores
         public claProducto()
         {
@@ -202,10 +202,10 @@ namespace Login.Clases
                 fabricante = value;
             }
         }
-        public DataTable Tabla
-        {
-            get { return tabla; }
-        }
+      //  public DataTable Tabla
+      //  {
+    //        get { return tabla; }
+    //    }
         /*
         public Boolean BuscaridProducto(int id)
         {

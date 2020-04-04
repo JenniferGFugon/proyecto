@@ -126,30 +126,24 @@ namespace Login
 
         private void BtnModificarCliente_Click(object sender, EventArgs e)
         {
-            
+           
+            clientes.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
+            clientes.Nombre_Cliente= txt_NombreCliente.Text;
+            clientes.TelefonoCliente = txt_TelefonoCliente.Text;
+            clientes.Coreo_electronico = txt_CorreoCliente.Text;
+            clientes.Direccion = txt_DireccionCliente.Text;
+           // clientes.Rtn = Convert.ToString( txt_RTNCliente.Text);
+           // clientes.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
 
-            cliente cliente = new cliente();
-            if(Convert.ToInt32(txt_IdCliente.Text) == Convert.ToInt32(cliente.IdCliente))
+            if (clientes.ModificarCliente())
             {
-                cliente.Categoria_Cliente = Convert.ToInt32(txt_IdCategoriaClien.Text);
-                cliente.Nombre_Cliente = Convert.ToString(txt_NombreCliente.Text);
-                cliente.TelefonoCliente = Convert.ToString(txt_TelefonoCliente.Text);
-                cliente.Coreo_electronico = Convert.ToString(txt_CorreoCliente.Text);
-                cliente.Direccion = Convert.ToString(txt_DireccionCliente.Text);
-                cliente.Rtn = Convert.ToString(txt_RTNCliente.Text);
-                cliente.N_Identidad = Convert.ToString(txt_IdentidadCliente.Text);
-
-
-                if (cliente.ModificarCliente())
-                {
-                    MessageBox.Show("Cliente Modificado Exitosamente");
-                }
-                else
-                {
-                    MessageBox.Show("Error el cliente no a sido modificado");
-                }
+                MessageBox.Show("Registro actulizado correctamente", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
+            else
+            {
+                MessageBox.Show("No se pudo Actualizar los datos");
+            }
+            limpiar();
 
         }
 
@@ -157,6 +151,7 @@ namespace Login
         {
             if (clientes.BuscarCLiente(Convert.ToInt32(txt_IdCliente.Text)))
             {
+                txt_IdCliente.Text = Convert.ToString(clientes.IdCliente);
                 txt_IdCategoriaClien.Text = Convert.ToString(clientes.Categoria_Cliente);
                 txt_NombreCliente.Text = clientes.Nombre_Cliente;
                 txt_TelefonoCliente.Text = clientes.TelefonoCliente;
@@ -180,5 +175,10 @@ namespace Login
         {
             buscar(Convert.ToInt32(txt_IdCliente.Text));
         }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+}   

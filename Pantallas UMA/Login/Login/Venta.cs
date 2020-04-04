@@ -59,10 +59,5 @@ namespace Login
             txt_IdCliente.Clear();
             txt_Total.Clear();*/
         }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

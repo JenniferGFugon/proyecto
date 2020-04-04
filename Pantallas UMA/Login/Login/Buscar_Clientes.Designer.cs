@@ -90,6 +90,7 @@
             this.btnBuscar_pantBuscarClientes.TabIndex = 48;
             this.btnBuscar_pantBuscarClientes.Text = "BUSCAR";
             this.btnBuscar_pantBuscarClientes.UseVisualStyleBackColor = false;
+
             // 
             // label1
             // 
@@ -112,6 +113,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 13);
             this.textBox2.TabIndex = 46;
+            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // panel3
