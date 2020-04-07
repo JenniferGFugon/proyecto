@@ -158,8 +158,8 @@ namespace Login
                 limpiar();
             }
 
-           
 
+            btnBuscarCliente.Visible = true;
         }
 
         private void buscar(int co)
@@ -179,7 +179,7 @@ namespace Login
                 txt_IdentidadCliente.Enabled = false;
                 btnGuardarCliente.Text = "Cancelar";
                 btnModificarCliente.Enabled = true;
-                
+                btnBuscarCliente.Visible = true;
             }
             else
             {
@@ -195,6 +195,7 @@ namespace Login
         private void BtnBuscarCliente_Click_1(object sender, EventArgs e)
         {
             btnModificarCliente.Visible = true;
+            btnBuscarCliente.Visible = false;
             buscar(Convert.ToInt32(txt_IdCliente.Text));
         }
 
