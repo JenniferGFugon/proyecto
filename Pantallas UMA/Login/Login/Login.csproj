@@ -110,6 +110,7 @@
     <Compile Include="Buscar_Productos.Designer.cs">
       <DependentUpon>Buscar_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Lista_venta_y_detalle.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
