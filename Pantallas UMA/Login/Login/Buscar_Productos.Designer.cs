@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Gestionar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgv_BuscarProducto = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -42,7 +41,6 @@
             this.rbOtrosProductos = new System.Windows.Forms.RadioButton();
             this.rbRepuesto = new System.Windows.Forms.RadioButton();
             this.rbServicio = new System.Windows.Forms.RadioButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BuscarProducto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +61,7 @@
             this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(758, 7);
+            this.button4.Location = new System.Drawing.Point(699, 13);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(33, 35);
@@ -87,7 +85,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(743, 214);
+            this.button1.Location = new System.Drawing.Point(645, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 61);
             this.button1.TabIndex = 68;
@@ -97,22 +95,13 @@
             // btn_Gestionar
             // 
             this.btn_Gestionar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Gestionar.Location = new System.Drawing.Point(743, 126);
+            this.btn_Gestionar.Location = new System.Drawing.Point(645, 126);
             this.btn_Gestionar.Name = "btn_Gestionar";
             this.btn_Gestionar.Size = new System.Drawing.Size(87, 61);
             this.btn_Gestionar.TabIndex = 67;
             this.btn_Gestionar.Text = "GESTIONAR PRODUCTOS";
             this.btn_Gestionar.UseVisualStyleBackColor = true;
             this.btn_Gestionar.Click += new System.EventHandler(this.btn_Gestionar_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(628, 126);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(95, 149);
-            this.pictureBox1.TabIndex = 66;
-            this.pictureBox1.TabStop = false;
             // 
             // dgv_BuscarProducto
             // 
@@ -203,13 +192,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(854, 298);
+            this.ClientSize = new System.Drawing.Size(750, 298);
             this.Controls.Add(this.rbServicio);
             this.Controls.Add(this.rbRepuesto);
             this.Controls.Add(this.rbOtrosProductos);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Gestionar);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgv_BuscarProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtBuscar);
@@ -223,7 +211,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Buscar_Productos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_BuscarProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -237,7 +224,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_Gestionar;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgv_BuscarProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBuscar;

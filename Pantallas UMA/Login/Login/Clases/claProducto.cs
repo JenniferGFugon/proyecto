@@ -268,14 +268,64 @@ namespace Login.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("insert into servicio (id_tipo_producto,nombre,precio) values({0},'{1}',{2});", 3, nombre,precio_venta));
+            r = conexion.Ejecutar(string.Format("insert into servicio (id_tipo_producto,nombre,precio) values({0},'{1}',{2});", 3, nombre, precio_venta));       
+            return r;
+    
+        }
+
+        public Boolean ModificarProductoGeneral()
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format("UPDATE producto_general SET nombre = '{0}' ,marca = '{1}' ,precio_venta = {2} ,precio_compra = {3} ,existencia ={4}  where id_producto_general = {5};",Nombre,Marca,Precio_venta,Precio_compra,Existencia,IdProducto));
+                
+            return r;
+        }
+
+        public Boolean ModificarServicio()
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format("UPDATE servicio SET nombre = '{0}' , precio = {1}  where id_servicio = {2};", Nombre,  Precio_venta, IdProducto));
 
             return r;
         }
 
-       
+        public Boolean EliminarProductoGeneral()
+        {
+            Boolean r = false;
 
-       
+            r = conexion.Ejecutar(string.Format(" DELETE  from producto_general where id_producto_general = {0} ; ",IdProducto));
+
+            return r;
+        }
+
+        public Boolean ModificarRepuesto()
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format("UPDATE repuesto set id_categoria_producto = {0} , nombre = '{1}' , marca = '{2}', año = {3} ,fabricante = '{4} ' , modelo = '{5}',precio_compra = {6} , precio_venta = {7}, existencia = {8}  where id_repuesto = {9} ;", Id_Categoria_Producto, Nombre, Marca, Año,Fabricante , Modelo, Precio_compra , Precio_venta , Existencia , IdProducto));
+
+            return r;
+        }
+
+        public Boolean EliminarRepuesto()
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format(" DELETE from repuesto where id_repuesto = {0} ; ", IdProducto));
+
+            return r;
+        }
+
+        public Boolean EliminarServicio()
+        {
+            Boolean r = false;
+
+            r = conexion.Ejecutar(string.Format(" DELETE from servicio where id_servicio = {0} ; ", IdProducto));
+
+            return r;
+        }
     }
 }
     
