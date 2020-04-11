@@ -650,7 +650,7 @@
             this.btn_modificar_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modificar_servicio.ForeColor = System.Drawing.Color.Black;
             this.btn_modificar_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar_servicio.Location = new System.Drawing.Point(452, 120);
+            this.btn_modificar_servicio.Location = new System.Drawing.Point(460, 137);
             this.btn_modificar_servicio.Margin = new System.Windows.Forms.Padding(2);
             this.btn_modificar_servicio.Name = "btn_modificar_servicio";
             this.btn_modificar_servicio.Size = new System.Drawing.Size(73, 56);
@@ -665,7 +665,7 @@
             this.btn_Eliminar_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar_servicio.ForeColor = System.Drawing.Color.Black;
             this.btn_Eliminar_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar_servicio.Location = new System.Drawing.Point(452, 208);
+            this.btn_Eliminar_servicio.Location = new System.Drawing.Point(460, 212);
             this.btn_Eliminar_servicio.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar_servicio.Name = "btn_Eliminar_servicio";
             this.btn_Eliminar_servicio.Size = new System.Drawing.Size(73, 56);
@@ -680,7 +680,7 @@
             this.btn_limpiar_pantalla_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar_pantalla_servicio.ForeColor = System.Drawing.Color.Black;
             this.btn_limpiar_pantalla_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar_pantalla_servicio.Location = new System.Drawing.Point(452, 295);
+            this.btn_limpiar_pantalla_servicio.Location = new System.Drawing.Point(460, 290);
             this.btn_limpiar_pantalla_servicio.Margin = new System.Windows.Forms.Padding(2);
             this.btn_limpiar_pantalla_servicio.Name = "btn_limpiar_pantalla_servicio";
             this.btn_limpiar_pantalla_servicio.Size = new System.Drawing.Size(73, 56);
@@ -695,7 +695,7 @@
             this.IngresarServicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IngresarServicio.ForeColor = System.Drawing.Color.Black;
             this.IngresarServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IngresarServicio.Location = new System.Drawing.Point(452, 34);
+            this.IngresarServicio.Location = new System.Drawing.Point(460, 62);
             this.IngresarServicio.Margin = new System.Windows.Forms.Padding(2);
             this.IngresarServicio.Name = "IngresarServicio";
             this.IngresarServicio.Size = new System.Drawing.Size(73, 56);

@@ -84,9 +84,10 @@ namespace Login
             if (producto.GuardarProductoGeneral())
             {
                
-                limpiarPantallaPro();
-                MessageBox.Show("Producto Guardado");
                 
+                MessageBox.Show("Producto Guardado");
+                limpiarPantallaPro();
+
 
             }
             else
@@ -198,6 +199,7 @@ namespace Login
             if (repuesto.GuardarRepuesto())
             {
                 MessageBox.Show("Producto Guardado");
+                limpiarPantallaRepuesto();
             }
             else
             {
@@ -209,9 +211,9 @@ namespace Login
         {
             btn_Ingresar.Visible = false;
             btn_Ingresar.Visible = true;
-            //btnCancelar.Visible = true;
+          
             btn_Eliminar.Visible = true;
-            //btnCancelar.Visible = true;
+           
             btn_LimpiarPantallaP.Visible = true;
             txt_IDProducto.Visible = true;
             btn_LimpiarPantallaP.Location = new Point(460, 290);
@@ -527,7 +529,6 @@ namespace Login
             producto.IdProducto = Convert.ToInt32(txt_IdServicio.Text);
             producto.Nombre = txt_NombreServicio.Text;
             producto.Precio_venta = Convert.ToDecimal(txt_PrecioServicio.Text);
-
             if (producto.ModificarServicio())
             {
                 MessageBox.Show("Producto Modificado", "Confirmacion", MessageBoxButtons.OK);
@@ -545,7 +546,7 @@ namespace Login
         {
             IngresarServicio.Visible = false;
             btn_limpiar_pantalla_servicio.Text = "Cancelar";
-            btn_limpiar_pantalla_servicio.Location = new Point(460, 56);
+            btn_limpiar_pantalla_servicio.Location = new Point(460, 62);
 
             if (txt_IdServicio.Text != "")
             {
@@ -556,7 +557,7 @@ namespace Login
                 MessageBox.Show("Ingrese el servicio a buscar");
                 IngresarServicio.Visible = true;
                 btn_limpiar_pantalla_servicio.Text = "Limpiar Pantalla";
-                btn_limpiar_pantalla_servicio.Location = new Point(469, 62);
+                btn_limpiar_pantalla_servicio.Location = new Point(460, 62);
             }
         }
 

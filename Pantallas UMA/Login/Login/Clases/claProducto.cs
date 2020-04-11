@@ -23,7 +23,7 @@ namespace Login.Clases
         private int año;
         private string fabricante;
         private claConexion2 conexion;
-        private DataTable tabla;
+        //private DataTable tabla;
         //constructores
         public claProducto()
         {
@@ -202,10 +202,10 @@ namespace Login.Clases
                 fabricante = value;
             }
         }
-        public DataTable Tabla
-        {
-            get { return tabla; }
-        }
+      //  public DataTable Tabla
+      //  {
+    //        get { return tabla; }
+    //    }
         /*
         public Boolean BuscaridProducto(int id)
         {
@@ -286,7 +286,7 @@ namespace Login.Clases
         {
             Boolean r = false;
 
-            r = conexion.Ejecutar(string.Format("UPDATE servicio SET nombre = '{0}' , precio = '{1}'  where id_servicio = {2};", Nombre,  Precio_venta, IdProducto));
+            r = conexion.Ejecutar(string.Format("UPDATE servicio SET nombre = '{0}' , precio = {1}  where id_servicio = {2};", Nombre,  Precio_venta, IdProducto));
 
             return r;
         }
