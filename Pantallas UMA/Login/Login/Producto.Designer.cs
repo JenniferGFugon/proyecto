@@ -33,10 +33,9 @@
             this.btn_Salir = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Producto_general = new System.Windows.Forms.TabPage();
-            this.btnbuscar = new System.Windows.Forms.Button();
             this.btn_Modificar = new System.Windows.Forms.Button();
             this.btn_Eliminar = new System.Windows.Forms.Button();
-            this.btn_LimpiarPantallaP = new System.Windows.Forms.Button();
+            this.btn_LimpiarPantalla = new System.Windows.Forms.Button();
             this.btn_Ingresar = new System.Windows.Forms.Button();
             this.txt_PrecioCompraProducto = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,12 +47,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_NombreProducto = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_BuscarProducto = new System.Windows.Forms.Button();
             this.txt_IDProducto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btn_moficicar_repuesto = new System.Windows.Forms.Button();
-            this.btn_eliminar_repuesto = new System.Windows.Forms.Button();
-            this.btn_limpiar_pantalla_repuesto = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btn_guardar_repuesto = new System.Windows.Forms.Button();
             this.cmbCategorias = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -77,9 +77,9 @@
             this.txt_IDrepuesto = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.btn_modificar_servicio = new System.Windows.Forms.Button();
-            this.btn_Eliminar_servicio = new System.Windows.Forms.Button();
-            this.btn_limpiar_pantalla_servicio = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.IngresarServicio = new System.Windows.Forms.Button();
             this.txt_PrecioServicio = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -133,15 +133,14 @@
             this.tabControl1.Location = new System.Drawing.Point(275, 79);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(608, 423);
+            this.tabControl1.Size = new System.Drawing.Size(608, 488);
             this.tabControl1.TabIndex = 42;
             // 
             // Producto_general
             // 
-            this.Producto_general.Controls.Add(this.btnbuscar);
             this.Producto_general.Controls.Add(this.btn_Modificar);
             this.Producto_general.Controls.Add(this.btn_Eliminar);
-            this.Producto_general.Controls.Add(this.btn_LimpiarPantallaP);
+            this.Producto_general.Controls.Add(this.btn_LimpiarPantalla);
             this.Producto_general.Controls.Add(this.btn_Ingresar);
             this.Producto_general.Controls.Add(this.txt_PrecioCompraProducto);
             this.Producto_general.Controls.Add(this.label8);
@@ -153,29 +152,15 @@
             this.Producto_general.Controls.Add(this.label4);
             this.Producto_general.Controls.Add(this.txt_NombreProducto);
             this.Producto_general.Controls.Add(this.label3);
+            this.Producto_general.Controls.Add(this.btn_BuscarProducto);
             this.Producto_general.Controls.Add(this.txt_IDProducto);
             this.Producto_general.Controls.Add(this.label1);
             this.Producto_general.Location = new System.Drawing.Point(4, 25);
             this.Producto_general.Name = "Producto_general";
-            this.Producto_general.Size = new System.Drawing.Size(600, 394);
+            this.Producto_general.Size = new System.Drawing.Size(600, 459);
             this.Producto_general.TabIndex = 0;
             this.Producto_general.Text = "Producto General";
             this.Producto_general.UseVisualStyleBackColor = true;
-            // 
-            // btnbuscar
-            // 
-            this.btnbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnbuscar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbuscar.ForeColor = System.Drawing.Color.Black;
-            this.btnbuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnbuscar.Location = new System.Drawing.Point(324, 30);
-            this.btnbuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnbuscar.Name = "btnbuscar";
-            this.btnbuscar.Size = new System.Drawing.Size(73, 30);
-            this.btnbuscar.TabIndex = 63;
-            this.btnbuscar.Text = "Buscar";
-            this.btnbuscar.UseVisualStyleBackColor = true;
-            this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
             // btn_Modificar
             // 
@@ -183,14 +168,13 @@
             this.btn_Modificar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Modificar.ForeColor = System.Drawing.Color.Black;
             this.btn_Modificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Modificar.Location = new System.Drawing.Point(460, 137);
+            this.btn_Modificar.Location = new System.Drawing.Point(459, 115);
             this.btn_Modificar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Modificar.Name = "btn_Modificar";
             this.btn_Modificar.Size = new System.Drawing.Size(73, 56);
             this.btn_Modificar.TabIndex = 60;
             this.btn_Modificar.Text = "Modificar Producto";
             this.btn_Modificar.UseVisualStyleBackColor = true;
-            this.btn_Modificar.Click += new System.EventHandler(this.btn_Modificar_Click);
             // 
             // btn_Eliminar
             // 
@@ -198,29 +182,28 @@
             this.btn_Eliminar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Eliminar.ForeColor = System.Drawing.Color.Black;
             this.btn_Eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar.Location = new System.Drawing.Point(460, 212);
+            this.btn_Eliminar.Location = new System.Drawing.Point(459, 203);
             this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Eliminar.Name = "btn_Eliminar";
             this.btn_Eliminar.Size = new System.Drawing.Size(73, 56);
             this.btn_Eliminar.TabIndex = 58;
             this.btn_Eliminar.Text = "Eliminar Producto";
             this.btn_Eliminar.UseVisualStyleBackColor = true;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
             // 
-            // btn_LimpiarPantallaP
+            // btn_LimpiarPantalla
             // 
-            this.btn_LimpiarPantallaP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_LimpiarPantallaP.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LimpiarPantallaP.ForeColor = System.Drawing.Color.Black;
-            this.btn_LimpiarPantallaP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LimpiarPantallaP.Location = new System.Drawing.Point(460, 290);
-            this.btn_LimpiarPantallaP.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_LimpiarPantallaP.Name = "btn_LimpiarPantallaP";
-            this.btn_LimpiarPantallaP.Size = new System.Drawing.Size(73, 56);
-            this.btn_LimpiarPantallaP.TabIndex = 59;
-            this.btn_LimpiarPantallaP.Text = "Limpiar Pantalla";
-            this.btn_LimpiarPantallaP.UseVisualStyleBackColor = true;
-            this.btn_LimpiarPantallaP.Click += new System.EventHandler(this.btn_LimpiarPantalla_Click);
+            this.btn_LimpiarPantalla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_LimpiarPantalla.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LimpiarPantalla.ForeColor = System.Drawing.Color.Black;
+            this.btn_LimpiarPantalla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LimpiarPantalla.Location = new System.Drawing.Point(459, 290);
+            this.btn_LimpiarPantalla.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_LimpiarPantalla.Name = "btn_LimpiarPantalla";
+            this.btn_LimpiarPantalla.Size = new System.Drawing.Size(73, 56);
+            this.btn_LimpiarPantalla.TabIndex = 59;
+            this.btn_LimpiarPantalla.Text = "Limpiar Pantalla";
+            this.btn_LimpiarPantalla.UseVisualStyleBackColor = true;
+            this.btn_LimpiarPantalla.Click += new System.EventHandler(this.btn_LimpiarPantalla_Click);
             // 
             // btn_Ingresar
             // 
@@ -228,12 +211,12 @@
             this.btn_Ingresar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Ingresar.ForeColor = System.Drawing.Color.Black;
             this.btn_Ingresar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Ingresar.Location = new System.Drawing.Point(460, 62);
+            this.btn_Ingresar.Location = new System.Drawing.Point(459, 29);
             this.btn_Ingresar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Ingresar.Name = "btn_Ingresar";
             this.btn_Ingresar.Size = new System.Drawing.Size(73, 56);
             this.btn_Ingresar.TabIndex = 57;
-            this.btn_Ingresar.Text = "Guardar Producto";
+            this.btn_Ingresar.Text = "Ingresar Producto";
             this.btn_Ingresar.UseVisualStyleBackColor = true;
             this.btn_Ingresar.Click += new System.EventHandler(this.btn_Ingresar_Click_1);
             // 
@@ -311,7 +294,6 @@
             this.txt_NombreProducto.Name = "txt_NombreProducto";
             this.txt_NombreProducto.Size = new System.Drawing.Size(238, 23);
             this.txt_NombreProducto.TabIndex = 46;
-            this.txt_NombreProducto.TextChanged += new System.EventHandler(this.txt_NombreProducto_TextChanged);
             // 
             // label3
             // 
@@ -323,13 +305,28 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombre";
             // 
+            // btn_BuscarProducto
+            // 
+            this.btn_BuscarProducto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_BuscarProducto.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BuscarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btn_BuscarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_BuscarProducto.Location = new System.Drawing.Point(306, 30);
+            this.btn_BuscarProducto.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_BuscarProducto.Name = "btn_BuscarProducto";
+            this.btn_BuscarProducto.Size = new System.Drawing.Size(72, 36);
+            this.btn_BuscarProducto.TabIndex = 44;
+            this.btn_BuscarProducto.Text = "Buscar";
+            this.btn_BuscarProducto.UseVisualStyleBackColor = true;
+            this.btn_BuscarProducto.Visible = false;
+            // 
             // txt_IDProducto
             // 
             this.txt_IDProducto.Location = new System.Drawing.Point(157, 37);
             this.txt_IDProducto.Name = "txt_IDProducto";
             this.txt_IDProducto.Size = new System.Drawing.Size(100, 23);
             this.txt_IDProducto.TabIndex = 1;
-            this.txt_IDProducto.TextChanged += new System.EventHandler(this.txt_IDProducto_TextChanged);
+            this.txt_IDProducto.Visible = false;
             // 
             // label1
             // 
@@ -340,12 +337,13 @@
             this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
+            this.label1.Visible = false;
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.btn_moficicar_repuesto);
-            this.tabPage4.Controls.Add(this.btn_eliminar_repuesto);
-            this.tabPage4.Controls.Add(this.btn_limpiar_pantalla_repuesto);
+            this.tabPage4.Controls.Add(this.button1);
+            this.tabPage4.Controls.Add(this.button2);
+            this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.btn_guardar_repuesto);
             this.tabPage4.Controls.Add(this.cmbCategorias);
             this.tabPage4.Controls.Add(this.label20);
@@ -370,55 +368,52 @@
             this.tabPage4.Controls.Add(this.label15);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(600, 394);
+            this.tabPage4.Size = new System.Drawing.Size(600, 459);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Repuesto";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // btn_moficicar_repuesto
+            // button1
             // 
-            this.btn_moficicar_repuesto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_moficicar_repuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_moficicar_repuesto.ForeColor = System.Drawing.Color.Black;
-            this.btn_moficicar_repuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_moficicar_repuesto.Location = new System.Drawing.Point(469, 137);
-            this.btn_moficicar_repuesto.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_moficicar_repuesto.Name = "btn_moficicar_repuesto";
-            this.btn_moficicar_repuesto.Size = new System.Drawing.Size(73, 56);
-            this.btn_moficicar_repuesto.TabIndex = 89;
-            this.btn_moficicar_repuesto.Text = "Modificar Producto";
-            this.btn_moficicar_repuesto.UseVisualStyleBackColor = true;
-            this.btn_moficicar_repuesto.Click += new System.EventHandler(this.btn_moficicar_repuesto_Click);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(476, 131);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(73, 56);
+            this.button1.TabIndex = 89;
+            this.button1.Text = "Modificar Producto";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // btn_eliminar_repuesto
+            // button2
             // 
-            this.btn_eliminar_repuesto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_eliminar_repuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar_repuesto.ForeColor = System.Drawing.Color.Black;
-            this.btn_eliminar_repuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar_repuesto.Location = new System.Drawing.Point(469, 212);
-            this.btn_eliminar_repuesto.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_eliminar_repuesto.Name = "btn_eliminar_repuesto";
-            this.btn_eliminar_repuesto.Size = new System.Drawing.Size(73, 56);
-            this.btn_eliminar_repuesto.TabIndex = 87;
-            this.btn_eliminar_repuesto.Text = "Eliminar Producto";
-            this.btn_eliminar_repuesto.UseVisualStyleBackColor = true;
-            this.btn_eliminar_repuesto.Click += new System.EventHandler(this.btn_eliminar_repuesto_Click);
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(476, 219);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(73, 56);
+            this.button2.TabIndex = 87;
+            this.button2.Text = "Eliminar Producto";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // btn_limpiar_pantalla_repuesto
+            // button3
             // 
-            this.btn_limpiar_pantalla_repuesto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_limpiar_pantalla_repuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpiar_pantalla_repuesto.ForeColor = System.Drawing.Color.Black;
-            this.btn_limpiar_pantalla_repuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar_pantalla_repuesto.Location = new System.Drawing.Point(469, 290);
-            this.btn_limpiar_pantalla_repuesto.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_limpiar_pantalla_repuesto.Name = "btn_limpiar_pantalla_repuesto";
-            this.btn_limpiar_pantalla_repuesto.Size = new System.Drawing.Size(73, 56);
-            this.btn_limpiar_pantalla_repuesto.TabIndex = 88;
-            this.btn_limpiar_pantalla_repuesto.Text = "Limpiar Pantalla";
-            this.btn_limpiar_pantalla_repuesto.UseVisualStyleBackColor = true;
-            this.btn_limpiar_pantalla_repuesto.Click += new System.EventHandler(this.btn_limpiar_pantalla_repuesto_Click);
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(476, 306);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(73, 56);
+            this.button3.TabIndex = 88;
+            this.button3.Text = "Limpiar Pantalla";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // btn_guardar_repuesto
             // 
@@ -426,12 +421,12 @@
             this.btn_guardar_repuesto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_guardar_repuesto.ForeColor = System.Drawing.Color.Black;
             this.btn_guardar_repuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_guardar_repuesto.Location = new System.Drawing.Point(469, 62);
+            this.btn_guardar_repuesto.Location = new System.Drawing.Point(476, 45);
             this.btn_guardar_repuesto.Margin = new System.Windows.Forms.Padding(2);
             this.btn_guardar_repuesto.Name = "btn_guardar_repuesto";
             this.btn_guardar_repuesto.Size = new System.Drawing.Size(73, 56);
             this.btn_guardar_repuesto.TabIndex = 86;
-            this.btn_guardar_repuesto.Text = "Guardar Producto";
+            this.btn_guardar_repuesto.Text = "Ingresar Producto";
             this.btn_guardar_repuesto.UseVisualStyleBackColor = true;
             this.btn_guardar_repuesto.Click += new System.EventHandler(this.btn_guardar_repuesto_Click_1);
             // 
@@ -579,7 +574,6 @@
             this.txt_NombreRepuesto.Name = "txt_NombreRepuesto";
             this.txt_NombreRepuesto.Size = new System.Drawing.Size(243, 23);
             this.txt_NombreRepuesto.TabIndex = 61;
-            this.txt_NombreRepuesto.TextChanged += new System.EventHandler(this.txt_NombreRepuesto_TextChanged);
             // 
             // label14
             // 
@@ -604,7 +598,7 @@
             this.btn_BuscarRepuesto.TabIndex = 59;
             this.btn_BuscarRepuesto.Text = "Buscar";
             this.btn_BuscarRepuesto.UseVisualStyleBackColor = true;
-            this.btn_BuscarRepuesto.Click += new System.EventHandler(this.btn_BuscarRepuesto_Click);
+            this.btn_BuscarRepuesto.Visible = false;
             // 
             // txt_IDrepuesto
             // 
@@ -612,7 +606,7 @@
             this.txt_IDrepuesto.Name = "txt_IDrepuesto";
             this.txt_IDrepuesto.Size = new System.Drawing.Size(100, 23);
             this.txt_IDrepuesto.TabIndex = 58;
-            this.txt_IDrepuesto.TextChanged += new System.EventHandler(this.txt_IDrepuesto_TextChanged);
+            this.txt_IDrepuesto.Visible = false;
             // 
             // label15
             // 
@@ -623,12 +617,13 @@
             this.label15.Size = new System.Drawing.Size(21, 16);
             this.label15.TabIndex = 57;
             this.label15.Text = "ID";
+            this.label15.Visible = false;
             // 
             // tabPage5
             // 
-            this.tabPage5.Controls.Add(this.btn_modificar_servicio);
-            this.tabPage5.Controls.Add(this.btn_Eliminar_servicio);
-            this.tabPage5.Controls.Add(this.btn_limpiar_pantalla_servicio);
+            this.tabPage5.Controls.Add(this.button4);
+            this.tabPage5.Controls.Add(this.button5);
+            this.tabPage5.Controls.Add(this.button6);
             this.tabPage5.Controls.Add(this.IngresarServicio);
             this.tabPage5.Controls.Add(this.txt_PrecioServicio);
             this.tabPage5.Controls.Add(this.label24);
@@ -639,55 +634,52 @@
             this.tabPage5.Controls.Add(this.label26);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(600, 394);
+            this.tabPage5.Size = new System.Drawing.Size(600, 459);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Servicio";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // btn_modificar_servicio
+            // button4
             // 
-            this.btn_modificar_servicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_modificar_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar_servicio.ForeColor = System.Drawing.Color.Black;
-            this.btn_modificar_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_modificar_servicio.Location = new System.Drawing.Point(460, 137);
-            this.btn_modificar_servicio.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_modificar_servicio.Name = "btn_modificar_servicio";
-            this.btn_modificar_servicio.Size = new System.Drawing.Size(73, 56);
-            this.btn_modificar_servicio.TabIndex = 89;
-            this.btn_modificar_servicio.Text = "Modificar Producto";
-            this.btn_modificar_servicio.UseVisualStyleBackColor = true;
-            this.btn_modificar_servicio.Click += new System.EventHandler(this.btn_modificar_servicio_Click);
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(452, 120);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(73, 56);
+            this.button4.TabIndex = 89;
+            this.button4.Text = "Modificar Producto";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // btn_Eliminar_servicio
+            // button5
             // 
-            this.btn_Eliminar_servicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_Eliminar_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Eliminar_servicio.ForeColor = System.Drawing.Color.Black;
-            this.btn_Eliminar_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Eliminar_servicio.Location = new System.Drawing.Point(460, 212);
-            this.btn_Eliminar_servicio.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Eliminar_servicio.Name = "btn_Eliminar_servicio";
-            this.btn_Eliminar_servicio.Size = new System.Drawing.Size(73, 56);
-            this.btn_Eliminar_servicio.TabIndex = 87;
-            this.btn_Eliminar_servicio.Text = "Eliminar Producto";
-            this.btn_Eliminar_servicio.UseVisualStyleBackColor = true;
-            this.btn_Eliminar_servicio.Click += new System.EventHandler(this.btn_Eliminar_servicio_Click);
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(452, 208);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(73, 56);
+            this.button5.TabIndex = 87;
+            this.button5.Text = "Eliminar Producto";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // btn_limpiar_pantalla_servicio
+            // button6
             // 
-            this.btn_limpiar_pantalla_servicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_limpiar_pantalla_servicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_limpiar_pantalla_servicio.ForeColor = System.Drawing.Color.Black;
-            this.btn_limpiar_pantalla_servicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_limpiar_pantalla_servicio.Location = new System.Drawing.Point(460, 290);
-            this.btn_limpiar_pantalla_servicio.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_limpiar_pantalla_servicio.Name = "btn_limpiar_pantalla_servicio";
-            this.btn_limpiar_pantalla_servicio.Size = new System.Drawing.Size(73, 56);
-            this.btn_limpiar_pantalla_servicio.TabIndex = 88;
-            this.btn_limpiar_pantalla_servicio.Text = "Limpiar Pantalla";
-            this.btn_limpiar_pantalla_servicio.UseVisualStyleBackColor = true;
-            this.btn_limpiar_pantalla_servicio.Click += new System.EventHandler(this.btn_limpiar_pantalla_servicio_Click);
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(452, 295);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(73, 56);
+            this.button6.TabIndex = 88;
+            this.button6.Text = "Limpiar Pantalla";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // IngresarServicio
             // 
@@ -695,7 +687,7 @@
             this.IngresarServicio.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IngresarServicio.ForeColor = System.Drawing.Color.Black;
             this.IngresarServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IngresarServicio.Location = new System.Drawing.Point(460, 62);
+            this.IngresarServicio.Location = new System.Drawing.Point(452, 34);
             this.IngresarServicio.Margin = new System.Windows.Forms.Padding(2);
             this.IngresarServicio.Name = "IngresarServicio";
             this.IngresarServicio.Size = new System.Drawing.Size(73, 56);
@@ -706,7 +698,7 @@
             // 
             // txt_PrecioServicio
             // 
-            this.txt_PrecioServicio.Location = new System.Drawing.Point(174, 152);
+            this.txt_PrecioServicio.Location = new System.Drawing.Point(152, 129);
             this.txt_PrecioServicio.Name = "txt_PrecioServicio";
             this.txt_PrecioServicio.Size = new System.Drawing.Size(101, 23);
             this.txt_PrecioServicio.TabIndex = 63;
@@ -715,7 +707,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(51, 159);
+            this.label24.Location = new System.Drawing.Point(29, 136);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 16);
             this.label24.TabIndex = 62;
@@ -723,17 +715,16 @@
             // 
             // txt_NombreServicio
             // 
-            this.txt_NombreServicio.Location = new System.Drawing.Point(174, 109);
+            this.txt_NombreServicio.Location = new System.Drawing.Point(152, 86);
             this.txt_NombreServicio.Name = "txt_NombreServicio";
             this.txt_NombreServicio.Size = new System.Drawing.Size(238, 23);
             this.txt_NombreServicio.TabIndex = 61;
-            this.txt_NombreServicio.TextChanged += new System.EventHandler(this.txt_NombreServicio_TextChanged);
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(51, 113);
+            this.label25.Location = new System.Drawing.Point(29, 90);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(60, 16);
             this.label25.TabIndex = 60;
@@ -745,31 +736,33 @@
             this.btn_BuscarServicio.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BuscarServicio.ForeColor = System.Drawing.Color.Black;
             this.btn_BuscarServicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_BuscarServicio.Location = new System.Drawing.Point(340, 57);
+            this.btn_BuscarServicio.Location = new System.Drawing.Point(318, 34);
             this.btn_BuscarServicio.Margin = new System.Windows.Forms.Padding(2);
             this.btn_BuscarServicio.Name = "btn_BuscarServicio";
             this.btn_BuscarServicio.Size = new System.Drawing.Size(72, 36);
             this.btn_BuscarServicio.TabIndex = 59;
             this.btn_BuscarServicio.Text = "Buscar";
             this.btn_BuscarServicio.UseVisualStyleBackColor = true;
-            this.btn_BuscarServicio.Click += new System.EventHandler(this.btn_BuscarServicio_Click);
+            this.btn_BuscarServicio.Visible = false;
             // 
             // txt_IdServicio
             // 
-            this.txt_IdServicio.Location = new System.Drawing.Point(174, 67);
+            this.txt_IdServicio.Location = new System.Drawing.Point(152, 44);
             this.txt_IdServicio.Name = "txt_IdServicio";
             this.txt_IdServicio.Size = new System.Drawing.Size(100, 23);
             this.txt_IdServicio.TabIndex = 58;
+            this.txt_IdServicio.Visible = false;
             // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(51, 67);
+            this.label26.Location = new System.Drawing.Point(29, 44);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(21, 16);
             this.label26.TabIndex = 57;
             this.label26.Text = "ID";
+            this.label26.Visible = false;
             // 
             // panel1
             // 
@@ -778,7 +771,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 465);
+            this.panel1.Size = new System.Drawing.Size(248, 534);
             this.panel1.TabIndex = 3;
             // 
             // Producto
@@ -786,7 +779,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(912, 512);
+            this.ClientSize = new System.Drawing.Size(912, 601);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btn_Salir);
             this.Controls.Add(this.label2);
@@ -815,6 +808,7 @@
         private System.Windows.Forms.TabPage Producto_general;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button btn_BuscarProducto;
         private System.Windows.Forms.TextBox txt_IDProducto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_NombreProducto;
@@ -858,16 +852,15 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btn_Modificar;
         private System.Windows.Forms.Button btn_Eliminar;
-        private System.Windows.Forms.Button btn_LimpiarPantallaP;
+        private System.Windows.Forms.Button btn_LimpiarPantalla;
         private System.Windows.Forms.Button btn_Ingresar;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn_guardar_repuesto;
-        private System.Windows.Forms.Button btn_modificar_servicio;
-        private System.Windows.Forms.Button btn_Eliminar_servicio;
-        private System.Windows.Forms.Button btn_limpiar_pantalla_servicio;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button IngresarServicio;
-        private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.Button btn_moficicar_repuesto;
-        private System.Windows.Forms.Button btn_eliminar_repuesto;
-        private System.Windows.Forms.Button btn_limpiar_pantalla_repuesto;
     }
 }

@@ -16,7 +16,7 @@ class claConexion2
             conexion = new MySqlConnection();
             BD = "uma";
             usuario = "root";
-            pass = "1234";
+            pass = "123456789";
             servidor = "127.0.0.1";
         conexion = new MySqlConnection();
 
