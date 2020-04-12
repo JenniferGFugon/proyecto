@@ -237,3 +237,18 @@ C:\Users\ASUS i5\Desktop\Nueva carpeta (3)\proyecto\Pantallas UMA\Login\Login\ob
 C:\Users\ASUS i5\Desktop\Nueva carpeta (3)\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.csproj.CopyComplete
 C:\Users\ASUS i5\Desktop\Nueva carpeta (3)\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.exe
 C:\Users\ASUS i5\Desktop\Nueva carpeta (3)\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.pdb
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.csprojAssemblyReference.cache
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Buscar_Productos.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Cliente.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Venta.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Buscar_Clientes.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Buscar_Ventas.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Producto.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Menu.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Login.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.Buscar.resources
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.csproj.GenerateResource.cache
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.exe
+C:\Users\Christian Inestroza\Desktop\desarrollo\proyecto\Pantallas UMA\Login\Login\obj\Debug\Login.pdb

@@ -31,7 +31,7 @@ namespace Login
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soloNumeros(e);
-           
+
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -73,7 +73,7 @@ namespace Login
 
         private void BtnGuardarCliente_Click(object sender, EventArgs e)
         {
-            if (txt_IdCategoriaClien.Text == string.Empty || txt_NombreCliente.Text == string.Empty || txt_DireccionCliente.Text == string.Empty || txt_IdentidadCliente.Text == string.Empty )
+            if (txt_IdCategoriaClien.Text == string.Empty || txt_NombreCliente.Text == string.Empty || txt_DireccionCliente.Text == string.Empty || txt_IdentidadCliente.Text == string.Empty)
             {
                 MessageBox.Show("Error Algunos campos obligatirios esta vacios, porfavor verifique");
             }
@@ -109,7 +109,7 @@ namespace Login
                 limpiar();
             }
 
-            
+
         }
 
         private void limpiar()
@@ -159,7 +159,7 @@ namespace Login
             }
 
 
-            btnBuscarCliente.Visible = true;
+
         }
 
         private void buscar(int co)
@@ -179,7 +179,7 @@ namespace Login
                 txt_IdentidadCliente.Enabled = false;
                 btnGuardarCliente.Text = "Cancelar";
                 btnModificarCliente.Enabled = true;
-                btnBuscarCliente.Visible = true;
+
             }
             else
             {
@@ -195,7 +195,6 @@ namespace Login
         private void BtnBuscarCliente_Click_1(object sender, EventArgs e)
         {
             btnModificarCliente.Visible = true;
-            btnBuscarCliente.Visible = false;
             buscar(Convert.ToInt32(txt_IdCliente.Text));
         }
 
@@ -204,4 +203,4 @@ namespace Login
 
         }
     }
-}   
+}

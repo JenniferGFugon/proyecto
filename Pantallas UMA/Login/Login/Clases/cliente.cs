@@ -22,13 +22,13 @@ namespace Login.Clases
         private string RTN;
         private string N_identidad;
         private claConexion2 Conexion2;
-        
 
-       
+
+
 
 
         public cliente()
-            {
+        {
 
             idCliente = 0;
             categoria_cliente = 0;
@@ -39,23 +39,23 @@ namespace Login.Clases
             RTN = "";
             N_identidad = "";
             Conexion2 = new claConexion2();
-            
+
 
         }
 
 
 
-       
 
 
 
-        public  int IdCliente
+
+        public int IdCliente
         {
-            get { return idCliente;}
+            get { return idCliente; }
             set { idCliente = value; }
         }
 
-        public int  Categoria_Cliente
+        public int Categoria_Cliente
         {
             get { return categoria_cliente; }
             set { categoria_cliente = value; }
@@ -99,10 +99,10 @@ namespace Login.Clases
 
         public Boolean GuardarCliente()
         {
-            if(Conexion2.Ejecutar(string.Format("INSERT INTO cliente(id_categoria_cliente,nombre_cliente,numero_telefono,correo_electronico,direccion_cliente,RTN,numero_identidad)Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", Categoria_Cliente, Nombre_Cliente, TelefonoCliente, Coreo_electronico, Direccion, Rtn, N_Identidad)))
+            if (Conexion2.Ejecutar(string.Format("INSERT INTO cliente(id_categoria_cliente,nombre_cliente,numero_telefono,correo_electronico,direccion_cliente,RTN,numero_identidad)Values('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", Categoria_Cliente, Nombre_Cliente, TelefonoCliente, Coreo_electronico, Direccion, Rtn, N_Identidad)))
             {
                 return true;
-                
+
             }
             else
             {
@@ -124,15 +124,15 @@ namespace Login.Clases
             }
         }
 
-        
+
         public Boolean BuscarCLiente(int id)
         {
             DataTable t1 = Conexion2.consulta(string.Format("SELECT id_cliente,id_categoria_cliente, nombre_cliente, numero_telefono, correo_electronico, direccion_cliente, RTN, numero_identidad  habilitado FROM cliente where id_cliente={0}", id));
-           
+
             if (t1.Rows.Count > 0)
             {
                 idCliente = Convert.ToInt32(t1.Rows[0][0].ToString());
-                categoria_cliente =  Convert.ToInt32(t1.Rows[0][1].ToString());
+                categoria_cliente = Convert.ToInt32(t1.Rows[0][1].ToString());
                 nombre_cliente = t1.Rows[0][2].ToString();
                 telefono_cliente = t1.Rows[0][3].ToString();
                 correo_electronico = t1.Rows[0][4].ToString();
@@ -151,5 +151,3 @@ namespace Login.Clases
     }
 
 }
-    
-
